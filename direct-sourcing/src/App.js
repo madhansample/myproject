@@ -1,12 +1,18 @@
 import './App.css';
+import { BrowserRouter as Router, Route, Routes, Switch, Redirect } from 'react-router-dom';
+import JobList from './component/job/joblist/Index'
+import Index from './component/job/viewjob/Index';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        Direct Sourcing
-      </header>
-    </div>
+    <Router>    
+      <Routes>
+        <Route path='/' element={<JobList />} >
+        </Route>    
+        <Route path='/careers' element={<Index />}>
+          </Route>    
+        </Routes>
+    </Router>
   );
 }
 

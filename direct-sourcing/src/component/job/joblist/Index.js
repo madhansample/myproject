@@ -3,7 +3,7 @@ import React from 'react';
 const Index = () => {
     return (
         <div>
-            Job List
+            <h6>Job List</h6>
         </div>
     );
 };
