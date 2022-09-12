@@ -1,42 +1,3 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .m-0 {
   margin: 0 !important;
 }
@@ -2969,6 +2930,7 @@ ol {
   width: 40%;
   /* height: 100%; */
   background-color: #001B38;
+  background-image: url("../images/tribal-block.svg");
   background-repeat: repeat;
   background-position: top left;
   background-size: contain;
@@ -4851,7 +4813,7 @@ textarea {
   opacity: 0;
   z-index: 9;
   cursor: pointer;
- 
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 }
 .toggle-slider-sm {
   position: relative;
@@ -4920,7 +4882,7 @@ textarea {
   opacity: 0;
   z-index: 9;
   cursor: pointer;
- 
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
 }
 .toggle-slider.disabled {
   background-color: #e1e1e1;
@@ -5806,7 +5768,6 @@ body.collapse-menu.menu-toggle-white #MenuToggleClose:hover svg path {
 .hero {
   position: relative;
   background: #FF5F57;
-
 }
 .hero .hero-card-header {
   height: 130px;

@@ -1,0 +1,433 @@
+/*Fix for Side Nav Bar Height*/
+/* #Nav {
+    display:block;
+    height:100vh !important;
+  } */
+.react-tabs__tab-list {
+	/* border-bottom: 1px solid #aaa; */
+	margin: 0 0 0px;
+	padding: 0;
+}
+
+#addjobtype-2{
+    margin-top: 10px;
+}
+
+.addjob-sunmittal{
+    height: 100px
+}
+
+.react-tel-input .form-control{
+  width: 100%;
+  height: calc(3.5rem + 2px);
+ 
+}
+
+.option {
+  font-size: 12px;
+  text-transform: capitalize;
+} 
+
+.Sspace{padding: 10px;}
+
+.custom-date-input{
+  padding-top: 1.625rem;
+  padding-bottom: .625rem;
+  padding-left: .625rem;
+  z-index: 999;
+}
+
+.assessment-interview{
+  height: 58px;
+  padding: 15px !important;
+  font-size: 1rem;
+  font-weight: 400;
+  background-color: #fff;
+}
+
+.downloaddots{
+	color: #0f0f0f;	
+	font-family: 'Noto Sans', sans-serif; font-display: swap;
+	font-size: .85rem;
+	cursor: pointer;
+}
+
+.downloaddots a{
+	color: #00162e;
+	font-family: 'Noto Sans', sans-serif; font-display: swap;
+  font-size: .85rem;
+}
+
+.candidatemenu{
+	padding: 0px;
+	margin: 0px;
+}
+
+.candidatemenu ul{
+	padding: 0px;
+	margin: 0px;
+}
+
+.candidatemenu ul li{
+	padding: 0px;
+	margin: 0px;
+	color: #00162e;
+	font-family: 'Noto Sans', sans-serif; font-display: swap;
+  font-size: .9rem;
+	display: block;
+}
+
+.candidatemenu ul li a{
+	padding: 5px 0px 2px 0px;
+	margin: 0px;
+	color: #0f0f0f;
+	font-family: 'Noto Sans', sans-serif; font-display: swap;
+    font-size: 12px;
+	display: block;
+}
+
+.candidatemenu ul li a:hover{
+	text-decoration: none;
+	color: #014283;	
+	background-color: #e9ecef;
+}
+
+.candidatemenu ul li a span{
+	padding: 10px 15px 0px 0px;
+	margin: 0px;
+	color: #1b1b1b;
+	font-family: 'Noto Sans', sans-serif; font-display: swap;
+  font-size: .8rem;
+}
+
+.selection-cell{
+	width: 5%;
+}
+/* .react-datepicker {
+	width: 136%;
+} */
+
+
+
+/* custom css for wave icon  */
+.wave {
+	animation-name: wave-animation;  /* Refers to the name of your @keyframes element below */
+	animation-duration: 2.5s;        /* Change to speed up or slow down */
+	animation-iteration-count: infinite;  /* Never stop waving :) */
+	transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+	display: inline-block;
+  }
+  
+  @keyframes wave-animation {
+	  0% { transform: rotate( 0.0deg) }
+	 10% { transform: rotate(14.0deg) }  /* The following five values can be played with to make the waving more or less extreme */
+	 20% { transform: rotate(-8.0deg) }
+	 30% { transform: rotate(14.0deg) }
+	 40% { transform: rotate(-4.0deg) }
+	 50% { transform: rotate(10.0deg) }
+	 60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
+	100% { transform: rotate( 0.0deg) }
+  }
+  
+  @import url("https://fonts.googleapis.com/css?family=Open+Sans|Pinyon+Script|Rochester");
+.sans {
+  font-family: "Pinyon Script", cursive;
+}
+
+.bold {
+  font-weight: bold;
+}
+.block {
+  display: block;
+}
+.underline {
+  border-bottom: 1px solid #777;
+  padding: 5px;
+  margin-bottom: 15px;
+}
+.margin-0 {
+  margin: 0;
+}
+.padding-0 {
+  padding: 0;
+}
+.pm-empty-space {
+  width: 100%;
+}
+.dateeee {
+  margin-top: 100px;
+}
+/* body {
+  padding: 20px 0;
+  background: rgb(241, 85, 85);
+} */
+.pm-certificate-container {
+  position: relative;
+  width: 800px;
+  height: 600px;
+  background-color: rgb(253, 87, 87);
+  padding: 30px;
+  color: #333;
+  font-family: "Open Sans", sans-serif;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+.outer-border {
+  width: 794px;
+  height: 594px;
+  position: absolute;
+  left: 50%;
+  margin-left: -397px;
+  top: 50%;
+  margin-top: -297px;
+  border: 2px solid #fff;
+}
+.inner-border {
+  width: 730px;
+  height: 530px;
+  position: absolute;
+  left: 50%;
+  margin-left: -365px;
+  top: 50%;
+  margin-top: -265px;
+  border: 2px solid #fff;
+}
+.pm-certificate-border {
+  position: relative;
+  width: 720px;
+  height: 520px;
+  padding: 0;
+  border: 1px solid #e1e5f0;
+  background-image: url("../assets/images/certificateBackground.png");
+  z-index: 0.1;
+  background-repeat: no-repeat;
+  left: 50%;
+  margin-left: -360px;
+  top: 50%;
+  margin-top: -260px;
+}
+.pm-certificate-block {
+  width: 650px;
+  height: 200px;
+  position: relative;
+  left: 50%;
+  margin-left: -325px;
+  top: 70px;
+  margin-top: 0;
+}
+.pm-certificate-header {
+  margin-bottom: 10px;
+}
+.pm-certificate-title {
+  position: relative;
+  top: 40px;
+}
+h2 {
+  font-size: 34px !important;
+}
+.pm-certificate-body {
+  padding: 20px;
+}
+.high5logo {
+  object-fit: contain;
+  height: 100px;
+}
+.pm-name-text {
+  font-size: 20px;
+}
+.pm-earned {
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+.completion {
+  margin-bottom: 10px;
+}
+.pm-earned-text {
+  font-size: 20px;
+}
+.pm-credits-text {
+  font-size: 15px;
+}
+.pm-course-title {
+}
+.pm-earned-text {
+  font-size: 20px;
+}
+.pm-credits-text {
+  font-size: 15px;
+}
+.pm-certified {
+  font-size: 12px;
+}
+.date {
+  margin-top: 15px;
+}
+.underline {
+  margin-bottom: 5px;
+}
+.pm-certificate-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 650px;
+  height: 100px;
+  position: relative;
+  left: 50%;
+  margin-left: -325px;
+  bottom: -105px;
+}
+
+.text-editor {
+  font-family: inherit;
+}
+.Hover-Dropdown{
+  z-Index : 100
+}
+
+.react-datepicker-popper{
+  z-index: 100;
+}
+
+.RichTextEditor__editor___1QqIU{
+  font-family: inherit;
+}
+
+
+
+.react-pagination-table {
+  position: relative;
+  border-radius: 3px;
+  background: #ffffff;
+  margin-bottom: 20px;
+  width: 80%;
+  margin: auto;
+}
+
+.react-pagination-table__sub-title {
+  float: right;
+}
+
+.react-pagination-table__title,
+.react-pagination-table__sub-title {
+  display: inline-block;
+  font-size: 18px;
+  margin: 0;
+  line-height: 1;
+  font-weight:100;
+  padding: 20px 20px 10px;
+}
+
+.react-pagination-table__header {
+  background: #e8e8e8;
+}
+
+.react-pagination-table__table {
+  text-align: center;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+}
+
+.pagination-status {
+  display: inline-block;
+  padding-left: 0;
+  margin: 20px 0;
+}
+
+.pagination-status__item {
+  display: inline;
+}
+
+.pagination-status .pagination-status__btn {
+  position: relative;
+  float: left;
+  padding: 6px 12px;
+  margin-left: -1px;
+  color: #337ab7;
+  text-decoration: none;
+  background-color: #fff;
+  border: 1px solid #ddd;
+}
+
+.pagination-status .pagination-status__btn:focus {
+  outline: none;
+}
+
+.pagination-status .pagination-status__btn--active,
+.pagination-status .pagination-status__btn:hover {
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #337ab7;
+  cursor: pointer;
+}
+
+.pagination-status .pagination-status__btn--disable,
+.pagination-status .pagination-status__btn--disable:hover {
+  color: #d0d0d0;
+  cursor: default;
+  border-color: #d0d0d0;
+  background-color: #fff;
+}
+
+input[type="radio"]{
+	display: none;
+}
+.individualLabel{
+	position:relative;
+	color:#ff8f73;
+	font-size: 15px;
+	border: 2px solid #ff8f73;
+	padding:10px 30px;
+	border-radius: 0.25em;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+.eventsLabel{
+	position:relative;
+	color:black;
+	font-size: 15px;
+	border: 1px solid #ced4da;
+	padding:10px 30px;
+	border-radius: 0.25em;
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+input[type="radio"]:checked + .individualLabel{
+	background-color: #ff8f73;
+	color:white;
+}
+input[type="radio"]:checked + .eventsLabel{
+	background-color:white;
+	color:black;
+}
+input[type="radio"]:hover + .eventsLabel{
+	border-color:#009EFF;
+	color:black;
+}
+input[type="radio"]:checked + .individualLabel::before{
+	height: 12px;
+	width:12px;
+	border:10px solid white;
+	background-color: #ff8f73;
+}
+input[type="radio"]:checked + .eventsLabel::before{
+	height: 12px;
+	width:12px;
+	border:10px solid #009EFF;
+	background-color: #009EFF;
+}
+@media screen and (min-width: 365px) and (max-width:410px) {
+  .mobile-space {margin-top:20px;}
+  .mobile-space2 {margin-top:none;}
+  .lastName {margin-top: 15px;}
+} 
+@media screen and (max-width: 450px) and (min-width:405px) {
+  .mobile-space {margin-top:20px;}
+  .mobile-space2 {margin-top:18px;}
+  .lastName {margin-top: 10px;}
+}
+
+
+
