@@ -1,5 +1,6 @@
 import React from 'react';
 import TopNavBar from '../../common/TopNavBar';
+import JobList from './JobList'
 
 const Index = () => {
     return (
@@ -7,6 +8,7 @@ const Index = () => {
             <TopNavBar />
             <hr />
             <h6 className='d-flex align-items-center justify-content-center'>Job List</h6>
+            <JobList />
         </div>
     );
 };
