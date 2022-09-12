@@ -7,28 +7,14 @@ import TopNavBar from '../../common/TopNavBar';
 import jobs from '../../../data/jobs.json'
 import Logo from '../viewjob/High5Logo.png'
 
-function Index  ()  {
+function Index  (props)  {
 
-const [job, setJob] =useState( {
-    "jobTitle": "SAP ABAP Developer with P2P",
-    "jobLocation": "Autin, TX / Mountain View, CA",
-    "jobId": "XYMEJ",
-    "positionCount": "1",
-    "jobPostedDate": "16-08-2022",
-    "jobPublishTime": '10:28 PM',
-    "jobRole": "SAP ABAP Developer",
-    "Onsite": true,
-    "Remote": false,
-    "jobDescription": [],
-    "jobDuration" :"25 days ago",
-    "jobSkill": ["Application engineering experience in SAP toolset, ABAP, Docusign","Expertise in procurement, P2P domain areas, and approval workflow management","Working proficiency and communication skills in verbal and written English"," Years of experience: Level II and Level III AE (>4 years)"],
-    "jobResponsibilty": ["Execute on integration and customization build based on SAP or other internal tools","Author design documents and present design reviews","Own responsibility for ensuring code is tested using defined test frameworks"," Identify problems with requirements and communicate them"," Work in an agile development environment making regular incremental progress"]
-  })
+const [job, setJob] =useState( {})
     
-// useEffect (()=> {
-//     setJob(jobs)
-//     setJob(props.data)
-// }, [])
+useEffect (()=> {
+   
+   setJob(props)
+}, [])
 //console.log(job)
 
     return (
