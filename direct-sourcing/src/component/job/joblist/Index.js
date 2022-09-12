@@ -7,7 +7,7 @@ const Index = () => {
         <div>
             <TopNavBar />
             <hr />
-            <h6 className='d-flex align-items-center justify-content-center'>Job List</h6>
+            {/* <h6 className='d-flex align-items-center justify-content-center'>Job List</h6> */}
             <JobList />
         </div>
     );

@@ -15,7 +15,7 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route path='/' element={<ViewJob />} ></Route>
+        {/* <Route path='/' element={<ViewJob />} ></Route> */}
         <Route path="/" element={<JobList />}></Route>
         <Route path="/careers" element={<Index />}></Route>
         <Route path="/apply" element={<ApplyJob />}></Route>

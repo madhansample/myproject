@@ -9,6 +9,27 @@ function JobList() {
   }, []);
   return (
     <>
+      <div className="col-lg-11">
+        <h3 className="ml-5">Job Search</h3>
+        <div className="card card-flat bg-gray4 d-flex m-3 ml-5">
+          <div className="card-body w-100">
+            <div className="form-floating mb-2 ml-2" style={{ zIndex: "999" }}>
+              <div className="">
+                <div class="col-lg-6 col-md-4 col-sm-12 col-xs-12">
+                  <div class="mb-2">
+                    <input
+                      type="text"
+                      placeholder="Search Jobs"
+                      class="form-control small font-14"
+                      //onChange={filterCompanies}
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="row justify-content-center">
         <div className="col-lg-11">
           {jobData.map((item, i) => (

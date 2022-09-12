@@ -102,7 +102,7 @@ const Index = () => {
             <div className='font-link' >
               <Container fluid classN style={{backgroundColor :' #F3F5F7', marginTop: 50, height:220}}>
                 <Row style={{marginLeft:80}}>
-                <Col style={{marginTop:40}}><a style={{color: '#3F7BB9'}} href="/careers/hcltech/jobs" >‹ Back to all jobs</a>
+                <Col style={{marginTop:40}}><a style={{color: '#3F7BB9'}} href="/" >‹ Back to all jobs</a>
 
                   <div className='header'  >
                       <h1 style={{marginTop:20}}  >SAP ABAP Developer with P2P</h1>
