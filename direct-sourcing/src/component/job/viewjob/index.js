@@ -9,6 +9,7 @@ import TopNavBar from '../../common/TopNavBar';
 
 
 
+
 const Index = () => {
     return (
         <div>
@@ -153,12 +154,21 @@ const Index = () => {
 
             <div style={{marginLeft:100, marginTop:80}}><span >Published on 16 Aug 2022, 10:28 PM</span></div>
             
+            <div style={{marginLeft:100, marginTop:40, width: 625, height: 1.5, backgroundColor: "#eee" }}></div>
 
-            {/* <div _ngcontent-careers-app-c17="" class="row">
-              <button _ngcontent-careers-app-c17="" class="button p-solid-button medium blue">
+
+            <div style={{marginLeft:100, marginTop:40}}>
+              <button onClick={() => {
+          window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
+        }}
+        style={{backgroundColor :"#3F7BB9"}}>
                 <span _ngcontent-careers-app-c17="" class="label">Back to Top</span>
                 </button>
-            </div> */}
+            </div>
+
+            <footer style={{marginLeft:100, marginTop:40}}>
+                <div >
+                    <span >Powered by</span><a href="/for-candidates/" rel="noopener" target="_blank"><img src = './High5Logo.png'/></a></div><p><a href="/privacy-policy" target="https">Privacy Policy</a> and <a href="/terms-of-service" target="https">Terms of Service</a></p></footer>
 
         </div>
     );
