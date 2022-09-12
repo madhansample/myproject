@@ -2965,7 +2965,14 @@ ol {
   background: white;
   padding: 20px;
 }
-
+.login-layout .col-right {
+  width: 40%;
+  /* height: 100%; */
+  background-color: #001B38;
+  background-repeat: repeat;
+  background-position: top left;
+  background-size: contain;
+}
 
 @media (max-width: 768px) {
   .login-layout {
@@ -4844,7 +4851,7 @@ textarea {
   opacity: 0;
   z-index: 9;
   cursor: pointer;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+ 
 }
 .toggle-slider-sm {
   position: relative;
@@ -4913,7 +4920,7 @@ textarea {
   opacity: 0;
   z-index: 9;
   cursor: pointer;
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+ 
 }
 .toggle-slider.disabled {
   background-color: #e1e1e1;
@@ -5799,6 +5806,7 @@ body.collapse-menu.menu-toggle-white #MenuToggleClose:hover svg path {
 .hero {
   position: relative;
   background: #FF5F57;
+
 }
 .hero .hero-card-header {
   height: 130px;
@@ -8253,5 +8261,4 @@ text-decoration-color: #fff;
 .emailTemplateHeader {
   height: 95%;
 }
-
 
