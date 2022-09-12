@@ -23,7 +23,7 @@ const Index = () => {
                     Explore what it is like to work and grow at HCL!
                 </em>
             </div>
-            <h6 className='d-flex align-items-center justify-content-center'>Job List</h6>
+            {/* <h6 className='d-flex align-items-center justify-content-center'>Job List</h6> */}
             <JobList />
         </div>
     );
