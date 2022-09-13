@@ -8,10 +8,14 @@
     "jobRole": "SAP ABAP Developer",
     "Onsite": true,
     "Remote": false,
+
     "hotJob": true,
     "jobStatus": "open",
     "jobType": "FullTime",
     "expiresOn": "2022-11-09T12:08:44.917Z",
+
+    "Hybrid" : 0,
+
     "jobDescription": [],
     "jobSkill": ["Node.js","Redux", "SAP"],
     "jobResponsibilty": ["Execute on integration and customization build based on SAP or other internal tools","Author design documents and present design reviews","Own responsibility for ensuring code is tested using defined test frameworks"," Identify problems with requirements and communicate them"," Work in an agile development environment making regular incremental progress"]
@@ -26,10 +30,7 @@
     "jobRole": "Oracle LSH",
     "Onsite": false,
     "Remote": true,
-    "hotJob": true,
-    "jobStatus": "active",
-    "jobType": "Contract",
-    "expiresOn": "2022-19-09T12:08:44.917Z",
+    "Hybrid": 0,
     "jobDescription": [],
     "jobSkill": ["Oracle", "My SQL", "OBIEE"],
     "jobResponsibilty": ["Handling support incidents, change requests and problem tickets independently","Implementing system changes and adhering process/documentations","Co-ordinating various IT team and ensure the application availability and business continuity","Co-ordinate and closely work with Business members and managing outage communications","Completing Business requirements on time and adhering SLAs"]
@@ -43,10 +44,15 @@
     "jobRole": "Business System",
     "Onsite": false,
     "Remote": true,
+
     "hotJob": false,
     "jobStatus": "expired",
     "jobType": "Part Time",
     "expiresOn": "2022-29-10T12:08:44.917Z",
+
+    "Hybrid": 0,
+    "jobDuration" :"a month ago",
+
     "jobDescription": ["Plan, prioritize, deliver, and support systems solutions related to SAP & other internal tools"," Organize and manage work through comprehensive documentation to drive project delivery","Architect innovative solutions to automate and scale business systems","Troubleshoot and resolve system, data, and process-related issues"],
     "jobSkill":["SAP", "MDG", "Ariba"],
     "jobResponsibilty":[]
@@ -58,12 +64,16 @@
     "positionCount": "1",
     "jobPostedDate": "2021-05-08T12:08:44.917Z",
     "jobRole": "SAP",
-    "Onsite": true,
+    "Onsite": false,
     "Remote": false,
+
     "hotJob": false,
     "jobStatus": "deactivated",
     "jobType": "Volunteer",
     "expiresOn": "2022-29-10T12:08:44.917Z",
+
+    "Hybrid": 3,
+
     "jobDescription": ["Execute on integration and customization build based on SAP or other internal tools","Author design documents and present design reviews","Own responsibility for ensuring code is tested using defined test frameworks","Identify problems with requirements and communicate them"],
     "jobSkill":["SAP toolset", "ABAP", "Docusign"],
     "jobResponsibilty":[]
