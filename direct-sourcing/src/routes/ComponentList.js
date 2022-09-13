@@ -7,6 +7,7 @@ import StaffingAgencyAdmin from "../component/staffingagency/admin/Index";
 import StaffingAgencyCurator from "../component/staffingagency/curator/Index";
 import StaffingAgencyCustomerSuccess from "../component/staffingagency/customersuccess/Index";
 import StaffingAgencyTalentCommunity from "../component/staffingagency/talentcommunity/Index";
+import Index from "../component/job/viewjob/Index.js";
 
 export const ComponentList = [
   {
@@ -45,4 +46,9 @@ export const ComponentList = [
     path: "/staffingagency/talentcommunity",
     element: <StaffingAgencyTalentCommunity />,
   },
+  {
+    path: "/carriers",
+    element: <Index />,
+  }
+
 ];
