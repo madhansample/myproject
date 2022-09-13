@@ -10,7 +10,7 @@ const Index = () => {
             <div className='m-0'>
                 <img height='200' width='100%' alt='Company Logo' src='https://assets.livehire.com/tc-branding/hcltech/bg-8.jpg' />
             </div>
-            <div className='text-center m-2'>
+            <div className='text-center m-2 mb-5'>
                 <h2>
                     We believe everyone deserves to live the career they love.
                 </h2>
@@ -23,8 +23,7 @@ const Index = () => {
                     Explore what it is like to work and grow at HCL!
                 </em>
             </div>
-            {/* <h6 className='d-flex align-items-center justify-content-center'>Job List</h6> */}
-            <JobList />
+            <JobList />           
         </div>
     );
 };

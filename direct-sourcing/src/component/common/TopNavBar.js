@@ -1,5 +1,8 @@
 import React, { useState } from 'react'
 import Modal from 'react-bootstrap/Modal'
+import { BsFacebook } from "react-icons/bs"
+import { FcGoogle } from "react-icons/fc"
+import { BsLinkedin } from "react-icons/bs"
 
 function TopNavBar() {
 
@@ -34,6 +37,45 @@ function TopNavBar() {
                         </button>
                     </div>
                 </Modal.Header>
+                <Modal.Body>
+                    <div className='d-flex flex-column mx-5'>
+                        <button className='btn btn-secondary m-2'>
+                            <BsFacebook /> Login with Facebook
+                        </button>
+                        <button className='btn btn-secondary m-2'>
+                            <FcGoogle /> Login with Google
+                        </button>
+                        <button className='btn btn-secondary m-2'>
+                            <BsLinkedin /> Login with Linkedin
+                        </button>                      
+                    </div>
+                    <div className='text-center'>
+                        OR
+                    </div>
+                    <div className='mx-3'>
+                        <label>Email</label>
+                        <input type='text'>
+
+                        </input>
+                    </div>
+                    <div className='mx-3 mb-2'>
+                        <label>Password</label>
+                        <input type='text'>
+
+                        </input>
+                    </div>
+                    <div className='d-flex'>
+                        <div>
+                            <input type='checkbox'>
+
+                            </input>
+                        </div>                      
+                        <div>{" "} Remember me</div>
+                        <div className='ml-auto'>
+                            <a href=''>Forgot Password</a>
+                        </div>                     
+                    </div>
+                </Modal.Body>
             </Modal>
         </>
     )
