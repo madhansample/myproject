@@ -7,39 +7,53 @@ import TopNavBar from '../../common/TopNavBar';
 import jobs from '../../../data/jobs.json'
 import Logo from '../viewjob/High5Logo.png'
 
-function Index  (props)  {
+function Index  ()  {
 
-const [job, setJob] =useState( {})
+const [job, setJob] =useState( { "jobTitle": "SAP ABAP Developer with P2P",
+"jobLocation": "Autin, TX / Mountain View, CA",
+"jobId": "XYMEJ",
+"positionCount": "1",
+"jobPostedDate": "16-08-2022",
+"jobPublishTime": "10:28 PM",
+"jobRole": "SAP ABAP Developer",
+"Onsite": true,
+"Remote": false,
+"Hybrid" : 3,
+"jobDescription": [],
+"jobDuration" :"25 days ago",
+"jobSkill": ["Application engineering experience in SAP toolset, ABAP, Docusign","Expertise in procurement, P2P domain areas, and approval workflow management","Working proficiency and communication skills in verbal and written English"," Years of experience: Level II and Level III AE (>4 years)"],
+"jobResponsibilty": ["Execute on integration and customization build based on SAP or other internal tools","Author design documents and present design reviews","Own responsibility for ensuring code is tested using defined test frameworks"," Identify problems with requirements and communicate them"," Work in an agile development environment making regular incremental progress"]})
     
-useEffect (()=> {
+// useEffect (()=> {
    
-   setJob(props)
-}, [])
+//    setJob(props)
+// }, [])
 //console.log(job)
 
     return (
         <div>
             <TopNavBar />
             <div className='font-link' >
-              <Container fluid style={{backgroundColor :' #F3F5F7', marginTop: 50, height:220}}>
+              <Container fluid style={{backgroundColor :'#FF5F57', marginTop: 50, height:220}}>
                 <Row style={{marginLeft:80}}>
-                <Col style={{marginTop:40}}><a style={{color: '#3F7BB9'}} href="/" >‹ Back to all jobs</a>
+                <Col style={{marginTop:40}}>
+                  {/* <a style={{color: '#3F7BB9'}} href="/" >‹ Back to all jobs</a> */}
 
                   <div className='header'  >
-                      <h1 style={{marginTop:20}}>{job.jobTitle}</h1>
+                      <h1 style={{marginTop:20, color:"white"}}>{job.jobTitle}</h1>
 
                     <div style={{marginTop:20}}> 
-                      <FaMapMarkerAlt style={{color: '#3F7BB9', fontSize : '12px' , marginLeft:1, marginRight:5}} />  
+                      <FaMapMarkerAlt style={{color: '#001B38', fontSize : '12px' , marginLeft:1, marginRight:5}} />  
                      
-                        <span  style={{marginRight:10}}>{job.jobLocation}</span>
+                        <span  style={{marginRight:10, color:"white"}}>{job.jobLocation}</span>
 
-                        <FaUser style={{color :"#3F7BB9", fontSize : '12px' , marginLeft:10, marginRight:5}} />  
-                        <span style={{marginRight:10}}>{job.positionCount} Position</span>
+                        <FaUser style={{color :"#001B38", fontSize : '12px' , marginLeft:10, marginRight:5}} />  
+                        <span style={{marginRight:10, color:"white"}}>{job.positionCount} Position</span>
 
 
-                        <FaRegCalendarAlt style={{color :"#3F7BB9", fontSize : '12px' , marginLeft:10, marginRight:5}} />  
+                        <FaRegCalendarAlt style={{color :"#001B38", fontSize : '12px' , marginLeft:10, marginRight:5}} />  
                        
-                        <span  style={{marginRight:10}}>{job.jobDuration}</span>
+                        <span  style={{marginRight:10,color:"white"}}>{job.jobDuration}</span>
                     </div>
 
                   </div>
@@ -49,14 +63,22 @@ useEffect (()=> {
               </div>
 
             <div style={{marginLeft:100, marginTop:20}}> 
-              <p><strong >Job Id: </strong>
-              <span  style={{marginRight:10}}>{job.jobId}</span></p>
-              <p><strong >Role : {job.jobRole}</strong></p>
-              <p><strong >Location : {job.jobLocation}</strong></p>
-              {
-                job.Onsite ?  <p><strong>Onsite / Hybrid / Remote :  Onsite</strong></p>
-                :  <strong>Onsite / Hybrid / Remote :  Remote</strong>
+              <p>Job Id : 
+              <strong><span  style={{marginRight:10}}>    {job.jobId}</span></strong></p>
+              <p>Role : <strong > {job.jobRole}</strong></p>
+              <p>Location : <strong > {job.jobLocation}</strong></p>
+              
+             { 
+             
+            job.Hybrid !== 0 ?   <span>Onsite / Hybrid / Remote : <strong>  Hybrid  (No. of Days - {job.Hybrid} )</strong></span>  : job.Onsite ? <span>Onsite / Hybrid / Remote :<strong>  Onsite</strong></span>
+             : <span> Onsite / Hybrid / Remote :<strong>  Remote</strong> </span>
+            
+
               }
+                
+              {/* // job.Onsite ?  <p><strong>Onsite / Hybrid / Remote :  Onsite</strong></p>
+              // :  <strong>Onsite / Hybrid / Remote :  Remote</strong> */}
+              {/* <p><strong>Onsite / Hybrid / Remote :  Hybrid  (No. of Days : {job.Hybrid}</strong></p> */}
              
             </div>
 
@@ -88,7 +110,7 @@ useEffect (()=> {
 
             </div>
 
-            <div style={{marginLeft:100, marginTop:80}}><span >Published on {job.jobPostedDate}, {job.jobPublishTime}</span></div>
+            <div style={{marginLeft:100, marginTop:80}}><span >Posted on {job.jobPostedDate}, {job.jobPublishTime}</span></div>
             
             <div style={{marginLeft:100, marginTop:40, width: 625, height: 1.5, backgroundColor: "#eee" }}></div>
 
