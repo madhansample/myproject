@@ -1,9 +1,19 @@
 import React, { useState, useEffect } from "react";
 import moment from "moment";
 import job from "../../../data/jobs.json";
+import { RiSuitcaseLine } from "react-icons/ri";
+import { GoLocation } from "react-icons/go";
+import { AiOutlineClockCircle } from "react-icons/ai";
 
 function JobList() {
   const jobData = job;
+  const jobType = [
+    "Full Time",
+    "Contract",
+    "Part Time",
+    "Temp To Hire",
+    "Volunteer",
+  ];
   useEffect(() => {
     console.log(job);
   }, []);
@@ -11,9 +21,10 @@ function JobList() {
     <>
       <div className="col-lg-11">
         <h3 className="ml-5">Job Search</h3>
+
         <div className="card card-flat bg-gray4 d-flex m-3 ml-5">
           <div className="card-body w-100">
-            <div className="form-floating mb-2 ml-2" style={{ zIndex: "999" }}>
+            <div className="form-floating mb-2" style={{ zIndex: "999" }}>
               <div className="">
                 <div class="col-lg-6 col-md-4 col-sm-12 col-xs-12">
                   <div class="mb-2">
@@ -21,8 +32,39 @@ function JobList() {
                       type="text"
                       placeholder="Search Jobs"
                       class="form-control small font-14"
+
                       //onChange={filterCompanies}
                     />
+                  </div>
+                </div>
+                <hr />
+                <div className="row">
+                  <div class="col-lg-6 col-md-4 col-sm-12 col-xs-12">
+                    <div class="mb-2">
+                      <input
+                        type="text"
+                        placeholder="Search JobLocation"
+                        class="form-control small font-14"
+
+                        //onChange={filterCompanies}
+                      />
+                    </div>
+                  </div>
+                  <div class="col-lg-6 col-md-4 col-sm-12 col-xs-12">
+                    <div className="form-floating">
+                      <select
+                        className="font-14 form-select"
+                        name="jobType"
+                       // onChange={handleChange}
+                      >
+                        <option>Select Job Type</option>
+                        {jobType.map((e) => (
+                          <option selected={e === jobType} value={e}>
+                            {e}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -32,38 +74,118 @@ function JobList() {
       </div>
       <div className="row justify-content-center">
         <div className="col-lg-11">
-          {jobData.map((item, i) => (
+          {jobData.map((request, i) => (
             <a
               key={i}
               href={`/careers`}
               className="card p-0 d-flex w-100 align-items-center justify-content-between request-listview flex-row overflow-hidden mb-1"
             >
-              <div className="card-body d-flex align-items-center overflow-auto">
-                <div className="w-100 ml-2">
-                  <div className="d-flex align-items-center mb-1">
-                    <h6 className="mb-0 me-2">{item.jobTitle}</h6>
-                  </div>
-                  <div className="font-regular font-primary font-gray1">
-                    <span>{item.jobSkill}</span>
-                  </div>
+              <div className="card-body">
+                <div className="d-flex align-items-center">
+                  <span className="mr-3">
+                    <h6>{request.jobTitle} </h6>
+                  </span>
+                  {request.hotJob && (
+                    <span className="tag tag-coral mr-9">HOT</span>
+                  )}
                 </div>
-              </div>
-              <div class="card-body font-regular flex-column align-items-end">
-                <div class="mb-1">
-                  <i className="far fa-map-marker-alt me-2 font-brandBlue"></i>
-                  {item.jobLocation}
-                </div>
-
-                <div class="mb-1">
-                  <i className="far fa-clock me-2 font-brandBlue"></i>
-                  {item.jobPostedDate}
-                  {/* {moment(new Date(item.jobPostedDate), "YYYYMMDD").fromNow()} */}
+                <div className="d-flex align-items-center">
+                  {request.jobStatus === "open" ? (
+                    <span className="tag tag-green1 mr-3">
+                      {request.jobStatus.charAt(0).toUpperCase() +
+                        request.jobStatus.slice(1)}
+                    </span>
+                  ) : request.jobStatus === "active" ? (
+                    <span className="tag tag-orange1 mr-3">
+                      {request.jobStatus.charAt(0).toUpperCase() +
+                        request.jobStatus.slice(1)}
+                    </span>
+                  ) : request.jobStatus === "expired" ? (
+                    <span className="tag tag-font_accent mr-3">
+                      {request.jobStatus.charAt(0).toUpperCase() +
+                        request.jobStatus.slice(1)}
+                    </span>
+                  ) : (
+                    <span className="tag tag-font_accent mr-3">
+                      {request.jobStatus.charAt(0).toUpperCase() +
+                        request.jobStatus.slice(1)}
+                    </span>
+                  )}
+                  <span className="d-flex align-items-center me-3">
+                    <RiSuitcaseLine />
+                    <small className="font-regular font-primary font-gray1 mr-2 ml-2">
+                      {request.jobType}
+                    </small>
+                  </span>
+                  <span className="d-flex align-items-center me-3">
+                    {request.jobLocation ? (
+                      <>
+                        <GoLocation />
+                        <span className="font-regular font-primary font-gray1 ml-2">
+                          {request.jobLocation}
+                        </span>
+                      </>
+                    ) : (
+                      <>
+                        <GoLocation />
+                        <span className="font-regular font-primary font-gray1 ml-2">
+                          Remote
+                        </span>
+                      </>
+                    )}
+                  </span>
+                  <span className="d-flex align-items-center me-3 ml-2">
+                    <AiOutlineClockCircle />
+                    {moment(request.expiresOn).diff(new Date(), "days") < 0 && (
+                      <span className="tag tag-red1 ml-2">
+                        <strong> Expired </strong>
+                      </span>
+                    )}
+                    {moment(request.expiresOn).diff(new Date(), "days") ===
+                      0 && (
+                      <span className="tag tag-red1 ml-2">
+                        <strong> Expires Today </strong>
+                      </span>
+                    )}
+                    {moment(request.expiresOn).diff(new Date(), "days") ===
+                      1 && (
+                      <span className="font-regular ml-2">
+                        <strong> 1 Day Left To Fill </strong>
+                      </span>
+                    )}
+                    {moment(request.expiresOn).diff(new Date(), "days") > 1 &&
+                      (moment(request.expiresOn).diff(new Date(), "days") <=
+                      5 ? (
+                        <span className="tag tag-red1 ml-2">
+                          <strong>
+                            {" "}
+                            {moment(request.expiresOn).diff(
+                              new Date(),
+                              "days"
+                            )}{" "}
+                            Days Left To Fill{" "}
+                          </strong>
+                        </span>
+                      ) : (
+                        <span className="font-regular ml-2">
+                          <strong>
+                            {" "}
+                            {moment(request.expiresOn).diff(
+                              new Date(),
+                              "days"
+                            )}{" "}
+                            Days Left To Fill{" "}
+                          </strong>
+                        </span>
+                      ))}
+                  </span>
                 </div>
               </div>
             </a>
           ))}
         </div>
       </div>
+      
     </>
   );
 }
