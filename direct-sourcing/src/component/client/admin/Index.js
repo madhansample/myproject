@@ -1,14 +1,17 @@
 import React, { useState } from "react";
 import SideNavbar from "../../layout/SideNavbar";
 import TopNavbar from "../../layout/TopNavbar";
+import ClientUpdate from "../../modal/ClientUpdate"
 
 const Index = () => {
   const [sidebarToggle, setSidebarToggle] = useState(false);
+  const [openClientUpdate, setOpenClientUpdate] = useState(false);
   const clientData = {
     role: "Admin",
     name: "Clive Lloyd",
     tenant: "TCC",
-    tenantType: 1
+    tenantType: 1,
+    setOpenClientUpdate: setOpenClientUpdate
   };
 
   return (
@@ -36,6 +39,12 @@ const Index = () => {
         </div>
       </div>
     </div>
+    {openClientUpdate && (
+        <ClientUpdate
+          openClientUpdate={openClientUpdate}
+          setOpenClientUpdate={setOpenClientUpdate}
+        />
+      )}
   </body>
   );
 };
