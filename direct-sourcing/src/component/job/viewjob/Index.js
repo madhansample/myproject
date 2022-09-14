@@ -2,43 +2,48 @@ import React, { useEffect, useState } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import { useParams } from "react-router-dom";
 import { FaRegCalendarAlt, FaUser, FaMapMarkerAlt } from "react-icons/fa";
 import moment from "moment";
 import TopNavBar from "../../common/TopNavBar";
 import Footer from "../../common/Footer";
 import Logo from "../../../assets/images/High5Logo.png";
 import ApplyJob from "./ApplyJob";
-import jobs from '../../../data/jobs.json'
+import jobs from "../../../data/jobs.json";
 
 function Index() {
+  const { id, tenant } = useParams();
   const [job, setJob] = useState({
-    "jobTitle": "SAP ABAP Developer with P2P",
-    "jobLocation": "Autin, TX / Mountain View, CA",
-    "jobId": "XYMEJ",
-    "positionCount": "1",
-    "jobPostedDate": "2021-08-14T12:08:44.917Z",
-    "jobRole": "SAP ABAP Developer",
-    "Onsite": true,
-    "Remote": false,
-    "hotJob": true,
-    "jobStatus": "open",
-    "jobType": "FullTime",
-    "expiresOn": "2022-10-10T12:08:44.917Z",
-    "Hybrid" : 0,
-    "jobDescription": [],
-    "jobSkill": ["Node.js","Redux", "SAP"],
-    "jobResponsibilty": ["Execute on integration and customization build based on SAP or other internal tools","Author design documents and present design reviews","Own responsibility for ensuring code is tested using defined test frameworks"," Identify problems with requirements and communicate them"," Work in an agile development environment making regular incremental progress"]
+    jobTitle: "SAP ABAP Developer with P2P",
+    jobLocation: "Autin, TX / Mountain View, CA",
+    jobId: "XYMEJ",
+    positionCount: "1",
+    jobPostedDate: "2021-08-14T12:08:44.917Z",
+    jobRole: "SAP ABAP Developer",
+    Onsite: true,
+    Remote: false,
+    hotJob: true,
+    jobStatus: "open",
+    jobType: "FullTime",
+    expiresOn: "2022-10-10T12:08:44.917Z",
+    Hybrid: 0,
+    jobDescription: [],
+    jobSkill: ["Node.js", "Redux", "SAP"],
+    jobResponsibilty: [
+      "Execute on integration and customization build based on SAP or other internal tools",
+      "Author design documents and present design reviews",
+      "Own responsibility for ensuring code is tested using defined test frameworks",
+      " Identify problems with requirements and communicate them",
+      " Work in an agile development environment making regular incremental progress",
+    ],
   });
   const [role, setRole] = useState("");
 
   useEffect(() => {
-    let details = localStorage.getItem("job")
-    let url = window.location.href.split('/')
-    console.log(url.slice(-1)[0])
-    setJob(jobs.find(i => i.jobId === url.slice(-1)[0]));
+    setJob(jobs.find((i) => i.jobId === id));
     setRole(localStorage.getItem("role"));
   }, []);
-
+  
   return (
     <div>
       <TopNavBar />
@@ -98,7 +103,7 @@ function Index() {
               </div>
             </Col>
             {/* <ApplyJob /> */}
-            { role === 'Candidate' && <ApplyJob />}
+            {role === "Candidate" && <ApplyJob />}
           </Row>
         </Container>
       </div>
