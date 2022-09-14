@@ -24,6 +24,7 @@ function AddJob({
   editJobData,
   addTemplate,
   editTemplate,
+  type
 }) {
   const today = new Date();
   const [loading, setLoading] = useState(false);
@@ -1064,6 +1065,7 @@ function AddJob({
               templateCategory={templateCategory}
               setTemplateCategory={setTemplateCategory}
               editTemplate={editTemplate}
+              type={type}
             />
           )}
 

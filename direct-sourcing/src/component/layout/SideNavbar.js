@@ -3,10 +3,12 @@ import { SidebarLogo } from "../../constants/Constants";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import ClientUpdate from "../modal/ClientUpdate";
 import Modal from "react-bootstrap/Modal";
+import AddJob from "../client/hiringmanager/AddJob";
 
 const SideNavbar = (props) => {
   const { data } = props;
   const [update, setUpdate] = useState(false);
+  const [ showAddJobModal, setShowAddJobModal ] = useState(false)
 
   const openUpdatePopUp = () => {
     setUpdate(true);
@@ -33,7 +35,7 @@ const SideNavbar = (props) => {
         </div>
       </div>
       <div className="body">
-        {data.role == "Admin" && (
+        {(data.role == "Admin" || data.role === 'Hiring Manager') && (
           <div style={{ fontSize: "17px" }} data-bs-placement="top">
             <OverlayTrigger
               trigger="click"
@@ -58,6 +60,9 @@ const SideNavbar = (props) => {
                       <i className="fad fa-fw fa-users mr-2"></i>Update Client
                     </button>
                   )}
+                  <button type="button" className="dropdown-item" onClick={() => setShowAddJobModal(true)}>
+                      <i className="fad fa-fw fa-users mr-2"></i>Add Job
+                  </button>
                 </div>
               }
             >
@@ -67,10 +72,10 @@ const SideNavbar = (props) => {
               </button>
             </OverlayTrigger>
           </div>
-        )}
+        )}            
         <ul className="menu">
           <li>
-            <a href="/staffingagency/admin" className="active">
+            <a href={data.dashboardURL} className="active">
               <i className="fad fa-fw fa-home-lg-alt mr-3" aria-hidden="true"></i>
               <span className="nav-text">Dashboard</span>
             </a>
@@ -79,6 +84,25 @@ const SideNavbar = (props) => {
       </div>
       <Modal show={update} size="lg">
         <ClientUpdate close={closePopUP} />
+      </Modal>
+      <Modal show={showAddJobModal} size="lg">
+          <Modal.Header>        
+              <h6 class="">Add Job</h6>
+              <button type="button" data-dismiss="modal" aria-label="Close" 
+                  onClick={() => setShowAddJobModal(false)} 
+                  class="close p-0 bl-modal-close-btn"
+              >
+                  <span aria-hidden="true">&times;</span>
+              </button>
+          </Modal.Header>
+          <Modal.Body>
+              <AddJob 
+                  closePanel={() => setShowAddJobModal(false)} 
+                  name={data.name}
+                  company={data.tenant}
+                  type={data.tenantType}
+              />
+          </Modal.Body>             
       </Modal>
     </div>
   );

@@ -6,7 +6,7 @@ import Select from 'react-select'
 
 function AdditionalInfo({ additionalInfoFinal, setAdditionalInfoFinal, addJobData, setAddJobData }) {
 
-    const additionalInfoArray = 2 === 2 ? [
+    const additionalInfoArray = 1 === 2 ? [
         { name: 'Client Data', question: 'Provide Client Info' },
         { name: 'Certifications', question: 'Required Certifications' },
         { name: 'License Requirement', question: 'License Requirement' },

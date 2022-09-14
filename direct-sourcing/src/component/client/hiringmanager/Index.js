@@ -1,32 +1,45 @@
 import React, { useState } from 'react';
-import TopNavBar from '../../common/TopNavBar';
-import Modal from 'react-bootstrap/Modal'
-import AddJob from './AddJob';
+import TopNavbar from '../../layout/TopNavbar';
+import SideNavbar from '../../layout/SideNavbar';
+import JobList from '../../job/joblist/JobList'
 
 const Index = () => {
-    const [ showAddJobModal, setShowAddJobModal ] = useState(false)
-    return (
-        <>
-            <button type='button' className='btn btn-outline-secondary m-2' onClick={() => setShowAddJobModal(true)}>
-                Add Job
-            </button>
-            <Modal show={showAddJobModal} size="lg">
-                <Modal.Header>        
-                    <h6 class="">Add Job</h6>
-                    <button type="button" data-dismiss="modal" aria-label="Close" 
-                        onClick={() => setShowAddJobModal(false)} 
-                        class="close p-0 bl-modal-close-btn"
-                    >
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </Modal.Header>
-                <Modal.Body>
-                    <AddJob 
-                        closePanel={() => setShowAddJobModal(false)} 
-                    />
-                </Modal.Body>             
-            </Modal>
-        </>
+    const [ sidebarToggle, setSidebarToggle ] = useState(true)
+    const clientData = {
+        role: "Hiring Manager",
+        name: "Jos Stock",
+        tenant: "Amazon",
+        tenantType: 1,
+        dashboardURL: "/client/hiringmanager"
+    }
+
+    return (     
+        <body className={sidebarToggle ? "layout1 close-menu" : "layout1"}>
+            <div className="body-decorator body-decorator-top"></div>
+            <div className="body-decorator body-decorator-bottom"></div>
+            <SideNavbar sidebarToggle={sidebarToggle} data={clientData} />
+            <TopNavbar
+                setSidebarToggle={setSidebarToggle}
+                sidebarToggle={sidebarToggle}
+            />
+            <div id="Content">
+                <div className="section section-sm pt-0-768">
+                    <div className="container">
+                        <div className="row justify-content-center">
+                            <div class="col-lg-12 text-center">
+                                <div class="mb-5">
+                                    <h1>
+                                    Hi. <span className="wave">👋</span> Jos Welcome Back{" "}
+                                    </h1>
+                                    <p>What can we help you work on today?</p>                                   
+                                </div>
+                                <JobList />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </body>
     )
 };
 

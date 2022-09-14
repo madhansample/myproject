@@ -47,7 +47,7 @@ export const ComponentList = [
     element: <StaffingAgencyTalentCommunity />,
   },
   {
-    path: "/carriers",
+    path: "/careers",
     element: <Index />,
   }
 

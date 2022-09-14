@@ -36,11 +36,15 @@ function Index() {
       " Work in an agile development environment making regular incremental progress",
     ],
   });
+  const [ role, setRole ] = useState('')
 
-  // useEffect (()=> {
-
-  //    setJob(props)
-  // }, [])
+  useEffect (()=> {
+    let details = localStorage.getItem('job')
+    if(details) {
+      setJob(JSON.parse(details))
+    }
+    setRole(localStorage.getItem('role'))
+  }, [])
   //console.log(job)
 
   return (
@@ -110,7 +114,7 @@ function Index() {
                 </div>
               </div>
             </Col>
-            <ApplyJob />
+            { role === 'Candidate' && <ApplyJob />}
           </Row>
         </Container>
       </div>

@@ -8,7 +8,8 @@ const Index = () => {
     role: "Admin",
     name: "Clive Lloyd",
     tenant: "TCC",
-    tenantType: 1
+    tenantType: 1,
+    dashboardURL: "/staffingagency/admin"
   };
 
   return (
@@ -36,7 +37,7 @@ const Index = () => {
         </div>
       </div>
     </div>
-  </body>
+    </body>
   );
 };
 
