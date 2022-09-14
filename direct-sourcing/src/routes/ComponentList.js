@@ -1,13 +1,16 @@
 import Home from "../component/home/Index";
 import ClientAdmin from "../component/client/admin/Index";
-import ClientCurator from "../component/client/curator/Index";
+import ClientRecruiter from "../component/client/recruiter/Index";
 import ClientHiringManager from "../component/client/hiringmanager/Index";
 import ClientTalentCommunity from "../component/client/talentcommunity/Index";
 import StaffingAgencyAdmin from "../component/staffingagency/admin/Index";
 import StaffingAgencyCurator from "../component/staffingagency/curator/Index";
 import StaffingAgencyCustomerSuccess from "../component/staffingagency/customersuccess/Index";
 import StaffingAgencyTalentCommunity from "../component/staffingagency/talentcommunity/Index";
+import SuperAdmin from "../component/superadmin/Index";
+import H5Coordinator from "../component/h5coordinator/Index";
 import Index from "../component/job/viewjob/Index.js";
+
 
 export const ComponentList = [
   {
@@ -20,7 +23,7 @@ export const ComponentList = [
   },
   {
     path: "/client/curator",
-    element: <ClientCurator />,
+    element: <ClientRecruiter />,
   },
   {
     path: "/client/hiringmanager",
@@ -49,6 +52,13 @@ export const ComponentList = [
   {
     path: "/carriers",
     element: <Index />,
-  }
-
+  },
+  {
+    path: "/superadmin",
+    element: <SuperAdmin />,
+  },
+  {
+    path: "/high5coordinator",
+    element: <H5Coordinator />,
+  },
 ];

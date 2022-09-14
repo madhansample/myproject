@@ -28,12 +28,14 @@ const SideNavbar = (props) => {
             <h6 className="mb-0">{data.name}</h6>
             <small className="mb-0">Role: {data.role}</small>
             <br />
-            <small ClassName="mb-0">Company : {data.tenant}</small>
+            {data.tenant && (
+              <small ClassName="mb-0">Company : {data.tenant}</small>
+            )}
           </div>
         </div>
       </div>
       <div className="body">
-        {data.role == "Admin" && (
+        {data.role == "Super Admin" && (
           <div style={{ fontSize: "17px" }} data-bs-placement="top">
             <OverlayTrigger
               trigger="click"
@@ -44,15 +46,13 @@ const SideNavbar = (props) => {
                   className="dropdown-menu dropdown-menu-right"
                   aria-labelledby="requestMoreMenu"
                 >
-                  {data.tenantType == 2 && (
-                    <button
-                      type="button"
-                      onClick={() => data.setOpenAddClient(true)}
-                      className="dropdown-item"
-                    >
-                      <i className="fad fa-fw fa-users mr-2"></i>Add Client
-                    </button>
-                  )}
+                  <button
+                    type="button"
+                    onClick={() => data.setOpenAddClient(true)}
+                    className="dropdown-item"
+                  >
+                    <i className="fad fa-fw fa-users mr-2"></i>Add Client
+                  </button>
                   {data.tenantType == 1 && (
                     <button type="button" className="dropdown-item" onClick={openUpdatePopUp}>
                       <i className="fad fa-fw fa-users mr-2"></i>Update Client
@@ -70,8 +70,11 @@ const SideNavbar = (props) => {
         )}
         <ul className="menu">
           <li>
-            <a href="/staffingagency/admin" className="active">
-              <i className="fad fa-fw fa-home-lg-alt mr-3" aria-hidden="true"></i>
+            <a href={data.url} className="active">
+              <i
+                className="fad fa-fw fa-home-lg-alt mr-3"
+                aria-hidden="true"
+              ></i>
               <span className="nav-text">Dashboard</span>
             </a>
           </li>
