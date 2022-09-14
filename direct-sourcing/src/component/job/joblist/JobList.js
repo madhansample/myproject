@@ -52,13 +52,13 @@ function JobList({ role }) {
 
   return (
     <div className="card card-flat card-borderless bg-gray4 p-4 mb-3">
-      {role === "Candidate" && (
+      {role === "Candidate" &&
         <div>
           <h4>Job Search</h4>
           <div className="card card-flat bg-gray4 d-flex">
             <div className="card-body w-100">
               <div className="form-floating mb-2" style={{ zIndex: "999" }}>
-                  <div className="row">
+                <div className="row">
                   <div class="col-lg-4">
                     <div class="mb-2">
                       <input
@@ -69,38 +69,38 @@ function JobList({ role }) {
                       />
                     </div>
                   </div>
-                    <div class="col-lg-4">
-                      <div class="mb-2">
-                        <input
-                          type="text"
-                          placeholder="Search JobLocation"
-                          class="form-control small font-14"
-                          onChange={filterJobLocation}
-                        />
-                      </div>
+                  <div class="col-lg-4">
+                    <div class="mb-2">
+                      <input
+                        type="text"
+                        placeholder="Search JobLocation"
+                        class="form-control small font-14"
+                        onChange={filterJobLocation}
+                      />
                     </div>
-                    <div class="col-lg-4">
-                      <div className="mb-2">
-                        <select
-                          className="form-select small font-14"
-                          name="jobType"
-                          // onChange={handleChange}
-                        >
-                          <option>Select Job Type</option>
-                          {jobType.map((e) => (
-                            <option>{e}</option>
-                          ))}
-                        </select>
-                      </div>
+                  </div>
+                  <div class="col-lg-4">
+                    <div className="mb-2">
+                      <select
+                        className="form-select small font-14"
+                        name="jobType"
+                        // onChange={handleChange}
+                      >
+                        <option>Select Job Type</option>
+                        {jobType.map((e) => (
+                          <option>{e}</option>
+                        ))}
+                      </select>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>}
+        </div>
+      }
+      <div>
         <div>
-          <div>
             {jobData.map((request, i) => (
               <a
                 key={i}             
