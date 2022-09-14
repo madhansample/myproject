@@ -113,11 +113,7 @@ function JobList({ role }) {
           <div>
             {jobData.map((request, i) => (
               <a
-                key={i}
-                onClick={(e) => {
-                  localStorage.setItem('job', JSON.stringify(request))
-                  localStorage.setItem('role', role)
-                }}
+                key={i}             
                 href={`/careers/amazon/jobs/${request.jobId}`}
                 className="card p-0 d-flex w-100 align-items-center justify-content-between request-listview flex-row overflow-hidden mb-1"
               >

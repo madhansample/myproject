@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import TopNavbar from '../../layout/TopNavbar';
 import SideNavbar from '../../layout/SideNavbar';
 import JobList from '../../job/joblist/JobList'
@@ -12,6 +12,10 @@ const Index = () => {
         tenantType: 1,
         url: "/client/hiringmanager"
     }
+
+    useEffect(() => {
+        localStorage.setItem('role', 'Client HM')
+    }, [])
 
     return (     
         <body className={sidebarToggle ? "layout1 close-menu" : "layout1"}>

@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Footer from '../../common/Footer';
 import TopNavBar from '../../common/TopNavBar';
 import JobList from './JobList'
 
 const Index = () => {
+
+    useEffect(() => {
+        localStorage.setItem('role', 'Candidate')
+    }, [])
+
     return (
         <div>
             <TopNavBar />

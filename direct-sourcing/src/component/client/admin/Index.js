@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import SideNavbar from "../../layout/SideNavbar";
 import TopNavbar from "../../layout/TopNavbar";
 import ClientUpdate from "../../modal/ClientUpdate"
@@ -15,6 +15,10 @@ const Index = () => {
     setOpenClientUpdate: setOpenClientUpdate,
     dashboardURL: "/staffingagency/admin"
   };
+
+  useEffect(() => {
+    localStorage.setItem('role', 'Client Admin')
+}, [])
 
   return (
     <body className={sidebarToggle ? "layout1 close-menu" : "layout1"}>
