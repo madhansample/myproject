@@ -1,15 +1,19 @@
 import { useState } from "react";
 import SideNavbar from "../../layout/SideNavbar";
 import TopNavbar from "../../layout/TopNavbar";
+import AddClient from "./AddClient";
 
 const Index = () => {
   const [sidebarToggle, setSidebarToggle] = useState(false);
+  const [openAddClient, setOpenAddClient] = useState(false);
   const clientData = {
     role: "Admin",
     name: "Steve Murphy",
     tenant: "IBC",
-    tenantType: 2
+    tenantType: 2,
+    setOpenAddClient: setOpenAddClient,
   };
+
   return (
     <body className={sidebarToggle ? "layout1 close-menu" : "layout1"}>
       <div className="body-decorator body-decorator-top"></div>
@@ -23,8 +27,8 @@ const Index = () => {
         <div className="section section-sm pt-0-768">
           <div className="container">
             <div className="row justify-content-center">
-              <div class="col-12 text-center">
-                <div class="mb-5">
+              <div className="col-12 text-center">
+                <div className="mb-5">
                   <h1>
                     Hi. <span className="wave">👋</span> Steve Welcome Back{" "}
                   </h1>
@@ -35,6 +39,12 @@ const Index = () => {
           </div>
         </div>
       </div>
+      {openAddClient && (
+        <AddClient
+          openAddClient={openAddClient}
+          setOpenAddClient={setOpenAddClient}
+        />
+      )}
     </body>
   );
 };
