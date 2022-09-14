@@ -100,7 +100,7 @@ function JobList({ role }) {
         </div>
       }
       <div>
-        <div>
+        <div className="form-floating mb-2 mt-5">
             {jobData.map((request, i) => (
               <a
                 key={i}             
