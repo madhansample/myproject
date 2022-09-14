@@ -32,7 +32,7 @@ const Index = () => {
               </a>
             </div>
             <div className="col-xl-3 d-flex">
-              <a href="/careers" className="card col p-0 card-xl mb-2">
+              <a href="/careers/jobs" className="card col p-0 card-xl mb-2">
                 <div className="card-body text-center">
                   <img height="30px" src={adminIcon} />
                   <h6 className="mt-4">Career</h6>

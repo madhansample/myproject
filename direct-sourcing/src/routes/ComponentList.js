@@ -10,6 +10,7 @@ import StaffingAgencyTalentCommunity from "../component/staffingagency/talentcom
 import SuperAdmin from "../component/superadmin/Index";
 import H5Coordinator from "../component/h5coordinator/Index";
 import Index from "../component/job/viewjob/Index.js";
+import Career from "../component/job/joblist/Index";
 
 export const ComponentList = [
   {
@@ -49,7 +50,7 @@ export const ComponentList = [
     element: <StaffingAgencyTalentCommunity />,
   },
   {
-    path: "/careers",
+    path: "/careers/viewJob",
     element: <Index />,
   },
   {
@@ -59,5 +60,9 @@ export const ComponentList = [
   {
     path: "/high5coordinator",
     element: <H5Coordinator />,
+  },
+  {
+    path: "/careers/jobs",
+    element: <Career />,
   },
 ];

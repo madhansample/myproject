@@ -17,7 +17,6 @@ function JobList({ role }) {
   ];
   const [searchJob, setSearchJob] = useState("");
   useEffect(() => {
-    console.log(job);
     setJobs(job)
     setSearchJob(job)
   }, []);
@@ -116,11 +115,10 @@ function JobList({ role }) {
               <a
                 key={i}
                 onClick={(e) => {
-                  //e.preventDefault()
                   localStorage.setItem('job', JSON.stringify(request))
                   localStorage.setItem('role', "HM")
                 }}
-                href={`/careers`}
+                href={`/careers/viewJob`}
                 className="card p-0 d-flex w-100 align-items-center justify-content-between request-listview flex-row overflow-hidden mb-1"
               >
                 <div className="card-body">
@@ -133,7 +131,7 @@ function JobList({ role }) {
                     )}
                   </div>
                   <div className="d-flex align-items-center">
-                    <div>
+                    {/* <div>
                       {request.jobStatus === "open" &&
                         <span className="tag tag-green1 mr-3">
                           Open
@@ -149,13 +147,7 @@ function JobList({ role }) {
                           Expired
                         </span>
                       }
-                      {/* { !["expired", "active", "open"].includes(request.jobStatus) &&
-                        <span className="tag tag-font_accent mr-3">
-                          {request.jobStatus.charAt(0).toUpperCase() +
-                            request.jobStatus.slice(1)}
-                        </span>
-                      } */}
-                    </div>
+                    </div> */}
                     <span className="d-flex align-items-center me-3">
                       <RiSuitcaseLine />
                       <small className="font-regular font-primary font-gray1 mr-2 ml-2">
