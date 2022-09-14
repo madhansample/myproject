@@ -77,7 +77,7 @@ const SideNavbar = (props) => {
                   <button
                     type="button"
                     className="dropdown-item"
-                    onClick={openUpdatePopUp}
+                    onClick={() => data.setOpenClientUpdate(true)}
                   >
                     <i className="fad fa-fw fa-users mr-2"></i>Update Client
                   </button>
