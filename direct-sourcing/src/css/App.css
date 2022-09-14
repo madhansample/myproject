@@ -2417,7 +2417,7 @@ html, body {
   width: 250px;
   background: #001B38;
   /* height: 100%;  */
-  position: relative;
+  /* position: absolute; */
 }
 #Nav:after {
   position: absolute;
