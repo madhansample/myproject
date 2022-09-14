@@ -10,6 +10,7 @@ const Index = () => {
     role: "Admin",
     name: "Clive Lloyd",
     tenant: "TCC",
+    url: "/client/admin",
     tenantType: 1,
     setOpenClientUpdate: setOpenClientUpdate
   };

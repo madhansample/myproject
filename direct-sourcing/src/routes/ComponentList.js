@@ -21,7 +21,7 @@ export const ComponentList = [
     element: <ClientAdmin />,
   },
   {
-    path: "/client/curator",
+    path: "/client/recruiter",
     element: <ClientRecruiter />,
   },
   {

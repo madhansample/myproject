@@ -8,6 +8,7 @@ const Index = () => {
     role: "Recruiter",
     name: "Oliver Davis",
     tenant: "TCC",
+    url: "/client/recruiter",
     tenantType: 1
   };
 
