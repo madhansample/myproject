@@ -1,9 +1,21 @@
-import React from "react";
+import React, {useState} from "react";
 import { SidebarLogo } from "../../constants/Constants";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
+import ClientUpdate from "../modal/ClientUpdate";
+import Modal from "react-bootstrap/Modal";
 
 const SideNavbar = (props) => {
   const { data } = props;
+  const [update, setUpdate] = useState(false);
+
+  const openUpdatePopUp = () => {
+    setUpdate(true);
+  };
+
+  const closePopUP = () => {
+    setUpdate(false);
+  };
+
   return (
     <div id="Nav">
       <div class="top">
@@ -37,6 +49,11 @@ const SideNavbar = (props) => {
                       <i className="fad fa-fw fa-users mr-2"></i>Add Client
                     </button>
                   )}
+                  {data.tenantType == 1 && (
+                    <button type="button" className="dropdown-item" onClick={openUpdatePopUp}>
+                      <i className="fad fa-fw fa-users mr-2"></i>Update Client
+                    </button>
+                  )}
                 </div>
               }
             >
@@ -56,6 +73,9 @@ const SideNavbar = (props) => {
           </li>
         </ul>
       </div>
+      <Modal show={update} size="lg">
+        <ClientUpdate close={closePopUP} />
+      </Modal>
     </div>
   );
 };
