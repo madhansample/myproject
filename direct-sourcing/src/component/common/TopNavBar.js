@@ -3,6 +3,7 @@ import Modal from 'react-bootstrap/Modal'
 import { BsFacebook } from "react-icons/bs"
 import { FcGoogle } from "react-icons/fc"
 import { BsLinkedin } from "react-icons/bs"
+import Amazon from './Amazon.png'
 
 function TopNavBar() {
 
@@ -10,15 +11,15 @@ function TopNavBar() {
 
     return (
         <>
-            <div className='d-flex align-items-center justify-content-center'>
+            <div className='d-flex align-items-center'>
                 <div className='my-2 mx-4'>
-                    <img src="https://assets.livehire.com/tc-branding/hcltech/logo-3.png" alt="" />
+                    <img height='40' width='120' src={Amazon} alt="" />
                 </div>
-                <div className='ml-auto my-2 mx-4'>
+                {/* <div className='ml-auto my-2 mx-4'>
                     <button className='btn btn-outline-secondary' onClick={() => setLogin(true)}>
                         LOG IN
                     </button>
-                </div>
+                </div> */}
             </div>
             <Modal show={login}>
                 <Modal.Header>
