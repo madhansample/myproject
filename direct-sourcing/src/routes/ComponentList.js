@@ -50,7 +50,7 @@ export const ComponentList = [
     element: <StaffingAgencyTalentCommunity />,
   },
   {
-    path: "/careers/viewJob",
+    path: "/careers/amazon/jobs/:id",
     element: <Index />,
   },
   {
@@ -62,7 +62,7 @@ export const ComponentList = [
     element: <H5Coordinator />,
   },
   {
-    path: "/careers/jobs",
+    path: "/careers/amazon/jobs",
     element: <Career />,
   },
 ];

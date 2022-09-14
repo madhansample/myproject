@@ -86,6 +86,18 @@ const Index = () => {
               </a>
             </div>
           </div>
+          <h5 style={{ marginTop: "50px" }}>Candidate</h5>
+          <div className="row mt-3 mb-5">
+            <div className="col-xl-3 d-flex">
+              <a href="/careers/amazon/jobs" className="card col p-0 card-xl mb-2">
+                <div className="card-body text-center">
+                  <img height="30px" src={adminIcon} />
+                  <h6 className="mt-4">Candidate</h6>
+                  <strong className="font-coral">Launch</strong>
+                </div>
+              </a>
+            </div>          
+          </div>
         </div>
       </div>
     </div>

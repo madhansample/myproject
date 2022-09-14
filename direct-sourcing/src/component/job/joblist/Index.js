@@ -15,15 +15,10 @@ const Index = () => {
                     We believe everyone deserves to live the career they love.
                 </h2>
                 <em>
-                    At HCL, we don’t just accept the differences—we celebrate them. 
-                    We are committed to cultivating and preserving a culture of inclusion and connectedness. 
-                    We are able to grow and learn better together with a diverse team of employees. 
-                    As an equal opportunity employer, 
-                    we stay true to our mission by ensuring that our place can be anyone’s place. 
-                    Explore what it is like to work and grow at HCL!
+                Amazon is guided by four principles: customer obsession rather than competitor focus, passion for invention, commitment to operational excellence, and long-term thinking. We are driven by the excitement of building technologies, inventing products, and providing services that change lives. We embrace new ways of doing things, make decisions quickly, and are not afraid to fail. We have the scope and capabilities of a large company, and the spirit and heart of a small one
                 </em>
             </div>
-            <JobList />
+            <JobList role='Candidate' />
             <Footer/>           
         </div>
     );

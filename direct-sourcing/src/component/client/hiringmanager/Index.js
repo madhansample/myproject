@@ -33,7 +33,7 @@ const Index = () => {
                                     </h1>
                                     <p>What can we help you work on today?</p>                                   
                                 </div>
-                                <JobList />
+                                <JobList role='HM' />
                             </div>
                         </div>
                     </div>
