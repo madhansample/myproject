@@ -285,10 +285,11 @@ const ApplyJob = () => {
             <ol className="ml-3">
               <li className="my-3 ">
                 {" "}
-                <a href="https://www.high5hire.com/">
-                  High5Hire's Terms of Service
+                <strong> High5Hire's Terms of Service</strong>
+                <a href="https://www.high5hire.com/" target="_blank">
+                  {" "}
+                  <RiShareBoxLine />{" "}
                 </a>{" "}
-                <RiShareBoxLine />
               </li>
 
               <li
@@ -305,20 +306,20 @@ const ApplyJob = () => {
               </li>
               {personalInfo && (
                 <small>
-                  LiveHire Ltd will collect, use and disclose your personal
+                  High5Hire Ltd will collect, use and disclose your personal
                   information to connect you with companies (and their service
                   providers) for current and future recruitment and talent
                   pooling purposes, to personalise our services for you
                   (including providing job and company recommendations), and to
-                  promote the business and services of LiveHire, its clients and
-                  partners. Our Privacy Policy further explains how personal
+                  promote the business and services of High5Hire, its clients
+                  and partners. Our Privacy Policy further explains how personal
                   information is collected, used and disclosed and how to
                   access, correct or complain about the handling of personal
-                  information. Please note that LiveHire will process your data
+                  information. Please note that High5Hire will process your data
                   in Australia where privacy laws may differ to where you are
                   located. Where you are an individual located in the EU or when
                   we handle your information that is subject to the EU General
-                  Data Protection Regulation (GDPR) and LiveHire is the data
+                  Data Protection Regulation (GDPR) and High5Hire is the data
                   controller of your information, the terms of our Privacy
                   Policy apply to how we handle your personal information in
                   compliance with the GDPR.
@@ -339,7 +340,7 @@ const ApplyJob = () => {
               </li>
               {electronicMessages && (
                 <small>
-                  I consent to LiveHire and parties with whom I am connected
+                  I consent to High5Hire and parties with whom I am connected
                   sending me commercial electronic messages related to job
                   opportunities in the Talent Communities that I join and their
                   products and services.
@@ -347,14 +348,19 @@ const ApplyJob = () => {
               )}
 
               <li className="my-3">
-                <a href="https://www.high5hire.com/">HCL Privacy Statement</a>
-                <RiShareBoxLine />
+                <strong> Amazon Privacy Statement</strong>
+                <a href="https://www.high5hire.com/" target="_blank">
+                  {" "}
+                  <RiShareBoxLine />
+                </a>
               </li>
               <li className="my-3">
-                <a href="https://www.high5hire.com/">
-                  HCL Candidate Data Privacy Policy
+                <strong> Amazon Candidate Data Privacy Policy</strong>
+
+                <a href="https://www.high5hire.com/" target="_blank">
+                  {" "}
+                  <RiShareBoxLine />
                 </a>
-                <RiShareBoxLine />
               </li>
               <li className="my-3">
                 <h6> Electronic Signature Authorisation</h6>
@@ -364,7 +370,7 @@ const ApplyJob = () => {
                   effective throughout the duration of my membership of any
                   Talent Community, the recruitment process and related
                   employment activities and until I request deletion of my
-                  LiveHire account.
+                  High5Hire account.
                 </small>
               </li>
             </ol>
@@ -487,10 +493,10 @@ const ApplyJob = () => {
               </div>
             </div>
 
-            <div className="col-sm-6 d-flex mt-4">
+            <div className="col-sm-7 d-flex mt-4">
               <h6 className="pt-1 font-regular font-primary font-gray1 text-truncate">
-                <div className="d-flex text-wrap">
-                  Are you a current employee at HCL?
+                <div className="d-flex ">
+                  Are you a current employee at Amazon?
                 </div>
               </h6>
               <div className="form-check form-switch">

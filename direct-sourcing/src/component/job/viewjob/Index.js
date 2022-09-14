@@ -10,26 +10,7 @@ import Logo from "../../../assets/images/High5Logo.png";
 import ApplyJob from "./ApplyJob";
 
 function Index() {
-  const [job, setJob] = useState({
-    jobTitle: "Oracle LSH and OBIEE developer",
-    jobLocation: "Princeton, NJ - United States",
-    jobId: "D7XJ4",
-    positionCount: "1",
-    jobPostedDate: "2021-08-16T12:08:44.917Z",
-    jobRole: "Oracle LSH",
-    Onsite: false,
-    Remote: true,
-    Hybrid: 0,
-    jobDescription: [],
-    jobSkill: ["Oracle", "My SQL", "OBIEE"],
-    jobResponsibilty: [
-      "Handling support incidents, change requests and problem tickets independently",
-      "Implementing system changes and adhering process/documentations",
-      "Co-ordinating various IT team and ensure the application availability and business continuity",
-      "Co-ordinate and closely work with Business members and managing outage communications",
-      "Completing Business requirements on time and adhering SLAs",
-    ],
-  });
+  const [job, setJob] = useState({});
   const [role, setRole] = useState("");
 
   useEffect(() => {
@@ -93,7 +74,7 @@ function Index() {
                   />
 
                   <span style={{ marginRight: 10, color: "white" }}>
-                    {moment(new Date(job.jobPostedDate), "YYYYMMDD").fromNow()}
+                    {moment(new Date(job.jobPostedDate), "MMDDYYYY").fromNow()}
                   </span>
                 </div>
               </div>
@@ -120,17 +101,17 @@ function Index() {
 
         {job.Hybrid !== 0 ? (
           <span>
-            Onsite / Hybrid / Remote :{" "}
+            Workplace Type :{" "}
             <strong> Hybrid (No. of Days - {job.Hybrid} )</strong>
           </span>
         ) : job.Onsite ? (
           <span>
-            Onsite / Hybrid / Remote :<strong> Onsite</strong>
+            Workplace Type :<strong> Onsite</strong>
           </span>
         ) : (
           <span>
             {" "}
-            Onsite / Hybrid / Remote :<strong> Remote</strong>{" "}
+            Workplace Type :<strong> Remote</strong>{" "}
           </span>
         )}
 
@@ -152,7 +133,10 @@ function Index() {
       </div>
       <div style={{ marginLeft: 100, marginTop: 80 }}>
         <span>
-          Posted on {job.jobPostedDate}, {job.jobPublishTime}
+          {" "}
+          Published on :{" "}
+          <strong>{moment(job.jobPostedDate).format("MM-DD-YYYY")}</strong>
+          {job.jobPublishTime}
         </span>
       </div>
       <div
