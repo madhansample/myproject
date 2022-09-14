@@ -10,7 +10,7 @@ const Index = () => {
         name: "Jos Stock",
         tenant: "Amazon",
         tenantType: 1,
-        dashboardURL: "/client/hiringmanager"
+        url: "/client/hiringmanager"
     }
 
     return (     

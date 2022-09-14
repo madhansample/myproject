@@ -7,6 +7,7 @@ import {
   AiOutlinePlusSquare,
   AiOutlineMinusSquare,
 } from "react-icons/ai";
+import { RiShareBoxLine } from "react-icons/ri";
 import Logo from "../viewjob/High5Logo.png";
 import ApplyWithEmail from "./ApplyWithEmail";
 
@@ -30,7 +31,10 @@ const ApplyJob = () => {
     >
       {isTermsAccepted ? (
         isTermsAccepted === true && isApplyEmail === true ? (
-          <ApplyWithEmail />
+          <ApplyWithEmail
+            setIsTempsAccepted={setIsTempsAccepted}
+            setIsApplyEmail={setIsApplyEmail}
+          />
         ) : (
           <div className=" mt-2">
             <div className="card card-lg mb-2">
@@ -279,7 +283,13 @@ const ApplyJob = () => {
         <Modal.Body style={{ backgroundColor: "#F3F5F7", padding: "30px" }}>
           <div className="">
             <ol className="ml-3">
-              <li className="my-3 ">High5Hire's Terms of Service</li>
+              <li className="my-3 ">
+                {" "}
+                <a href="https://www.high5hire.com/">
+                  High5Hire's Terms of Service
+                </a>{" "}
+                <RiShareBoxLine />
+              </li>
 
               <li
                 className="my-3 p-2 d-flex justify-content-between"
@@ -336,8 +346,16 @@ const ApplyJob = () => {
                 </small>
               )}
 
-              <li className="my-3">HCL Privacy Statement</li>
-              <li className="my-3">HCL Candidate Data Privacy Policy</li>
+              <li className="my-3">
+                <a href="https://www.high5hire.com/">HCL Privacy Statement</a>
+                <RiShareBoxLine />
+              </li>
+              <li className="my-3">
+                <a href="https://www.high5hire.com/">
+                  HCL Candidate Data Privacy Policy
+                </a>
+                <RiShareBoxLine />
+              </li>
               <li className="my-3">
                 <h6> Electronic Signature Authorisation</h6>
                 <small>
@@ -376,7 +394,7 @@ const ApplyJob = () => {
 
           <button
             style={{ float: "right", width: 120 }}
-            className=" mb-4 btn btn-sm btn-secondary"
+            className=" mb-4 btn btn-sm btn-primary"
             disabled={!isChecked ? true : false}
             onClick={() => {
               setIsTempsAccepted(true);

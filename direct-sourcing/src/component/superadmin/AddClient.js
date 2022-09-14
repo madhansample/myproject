@@ -60,7 +60,7 @@ const AddClient = (props) => {
   const handleChange = async (e) => {
     const file = e.target.files[0];
     const base64 = await convertBase64(file);
-    var file1 = dataURLtoFile(base64, 'hello.jpeg');
+    var file1 = dataURLtoFile(base64, "hello.jpeg");
     console.log(file1);
   };
   return (
@@ -119,25 +119,9 @@ const AddClient = (props) => {
                           </Form.Control.Feedback>
                         </div>
                       </div>
-                      <div className="col-lg-4">
-                        <div className="form-floating">
-                          <Form.Control
-                            type="text"
-                            placeholder="Enter Last Name"
-                            onChange={(e) =>
-                              setField("zipCode", e.target.value)
-                            }
-                            isInvalid={!!errors.zipCode}
-                          />
-                          <label>Zip Code *</label>
-                          <Form.Control.Feedback type="invalid">
-                            {errors.zipCode}
-                          </Form.Control.Feedback>
-                        </div>
-                      </div>
                     </div>
                     <div className="row mt-4">
-                      <div className="col-lg-4">
+                      <div className="col-lg-6">
                         <div className="form-floating">
                           <Form.Control
                             type="text"
@@ -153,7 +137,7 @@ const AddClient = (props) => {
                           </Form.Control.Feedback>
                         </div>
                       </div>
-                      <div className="col-lg-4">
+                      <div className="col-lg-6">
                         <div className="form-floating">
                           <Form.Control
                             type="text"
@@ -169,17 +153,16 @@ const AddClient = (props) => {
                           </Form.Control.Feedback>
                         </div>
                       </div>
-                      <div className="col-lg-4">
+                    </div>
+                    <div className="row mt-4">
+                      <div className="col-lg-12">
                         <div className="form-floating">
                           <Form.Control
                             type="text"
-                            placeholder="Enter Address"
-                            onChange={(e) =>
-                              setField("address", e.target.value)
-                            }
+                            placeholder="Search Address"
                             isInvalid={!!errors.address}
                           />
-                          <label>Address *</label>
+                          <label>Search Address *</label>
                           <Form.Control.Feedback type="invalid">
                             {errors.address}
                           </Form.Control.Feedback>
@@ -187,52 +170,93 @@ const AddClient = (props) => {
                       </div>
                     </div>
                     <div className="row mt-4">
-                      <div className="col-lg-4">
-                        <div className="form-floating">
-                          <Form.Control
-                            type="text"
-                            placeholder="Enter City"
-                            onChange={(e) =>
-                              setField("cityName", e.target.value)
-                            }
-                            isInvalid={!!errors.name}
-                          />
-                          <label>City *</label>
-                          <Form.Control.Feedback type="invalid">
-                            {errors.cityName}
-                          </Form.Control.Feedback>
+                      <div className="row mb-2">
+                        <div className="col-lg-12">
+                          <label className="mb-2">Address</label>
                         </div>
                       </div>
-                      <div className="col-lg-4">
-                        <div className="form-floating">
-                          <Form.Control
-                            type="text"
-                            placeholder="Enter State"
-                            onChange={(e) =>
-                              setField("stateName", e.target.value)
-                            }
-                            isInvalid={!!errors.stateName}
-                          />
-                          <label>State *</label>
-                          <Form.Control.Feedback type="invalid">
-                            {errors.stateName}
-                          </Form.Control.Feedback>
+                      <div className="row mb-2">
+                        <div className="col-lg-4">
+                          <div className="form-floating">
+                            <Form.Control
+                              type="text"
+                              placeholder="Enter Zipcode"
+                              onChange={(e) =>
+                                setField("zipCode", e.target.value)
+                              }
+                              isInvalid={!!errors.zipCode}
+                            />
+                            <label>Zipcode *</label>
+                            <Form.Control.Feedback type="invalid">
+                              {errors.zipCode}
+                            </Form.Control.Feedback>
+                          </div>
+                        </div>
+                        <div className="col-lg-8">
+                          <div className="form-floating">
+                            <Form.Control
+                              type="text"
+                              placeholder="Enter Address"
+                              onChange={(e) =>
+                                setField("address", e.target.value)
+                              }
+                              isInvalid={!!errors.address}
+                            />
+                            <label>Address *</label>
+                            <Form.Control.Feedback type="invalid">
+                              {errors.address}
+                            </Form.Control.Feedback>
+                          </div>
                         </div>
                       </div>
-                      <div className="col-lg-4">
-                        <div className="form-floating">
-                          <Form.Control
-                            type="text"
-                            placeholder="Enter Country"
-                            onChange={(e) =>
-                              setField("countryName", e.target.value)
-                            }
-                            isInvalid={!!errors.countryName}
-                          />
-                          <label>Country *</label>
-                          <Form.Control.Feedback type="invalid">
-                            {errors.countryName}
-                          </Form.Control.Feedback>
+                      <div className="row mb-2">
+                        <div className="col-lg-4">
+                          <div className="form-floating">
+                            <Form.Control
+                              type="text"
+                              placeholder="Enter City"
+                              onChange={(e) =>
+                                setField("cityName", e.target.value)
+                              }
+                              isInvalid={!!errors.cityName}
+                            />
+                            <label>City *</label>
+                            <Form.Control.Feedback type="invalid">
+                              {errors.cityName}
+                            </Form.Control.Feedback>
+                          </div>
+                        </div>
+                        <div className="col-lg-4">
+                          <div className="form-floating">
+                            <Form.Control
+                              type="text"
+                              placeholder="Enter State"
+                              onChange={(e) =>
+                                setField("stateName", e.target.value)
+                              }
+                              isInvalid={!!errors.stateName}
+                            />
+                            <label>State *</label>
+                            <Form.Control.Feedback type="invalid">
+                              {errors.stateName}
+                            </Form.Control.Feedback>
+                          </div>
+                        </div>
+                        <div className="col-lg-4">
+                          <div className="form-floating">
+                            <Form.Control
+                              type="text"
+                              placeholder="Enter Country"
+                              onChange={(e) =>
+                                setField("countryName", e.target.value)
+                              }
+                              isInvalid={!!errors.countryName}
+                            />
+                            <label>Country *</label>
+                            <Form.Control.Feedback type="invalid">
+                              {errors.countryName}
+                            </Form.Control.Feedback>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -264,7 +288,7 @@ const AddClient = (props) => {
                             </Form.Label>
                             <Form.Control
                               type="file"
-                              accept="image/png, image/jpeg"
+                              accept="image/png,  image/jpeg"
                               onChange={handleChange}
                             />
                           </Form.Group>
@@ -281,7 +305,7 @@ const AddClient = (props) => {
                             </Form.Label>
                             <Form.Control
                               type="file"
-                              accept="image/png,image/jpeg"
+                              accept="image/png,  image/jpeg"
                             />
                           </Form.Group>
                         </div>
