@@ -11,7 +11,6 @@ import SuperAdmin from "../component/superadmin/Index";
 import H5Coordinator from "../component/h5coordinator/Index";
 import Index from "../component/job/viewjob/Index.js";
 
-
 export const ComponentList = [
   {
     path: "/",

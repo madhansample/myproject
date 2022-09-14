@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { SidebarLogo } from "../../constants/Constants";
 import OverlayTrigger from "react-bootstrap/OverlayTrigger";
 import ClientUpdate from "../modal/ClientUpdate";
@@ -53,11 +53,34 @@ const SideNavbar = (props) => {
                   >
                     <i className="fad fa-fw fa-users mr-2"></i>Add Client
                   </button>
-                  {data.tenantType == 1 && (
-                    <button type="button" className="dropdown-item" onClick={openUpdatePopUp}>
-                      <i className="fad fa-fw fa-users mr-2"></i>Update Client
-                    </button>
-                  )}
+                </div>
+              }
+            >
+              <button type="button" className="btn w-100 px-0">
+                <i className="fas fa-plus fa-fw-dropdown"></i>
+                <span className="nav-text ml-2">New</span>
+              </button>
+            </OverlayTrigger>
+          </div>
+        )}
+        {data.role == "Admin" && (
+          <div style={{ fontSize: "17px" }} data-bs-placement="top">
+            <OverlayTrigger
+              trigger="click"
+              rootClose
+              placement="bottom-end"
+              overlay={
+                <div
+                  className="dropdown-menu dropdown-menu-right"
+                  aria-labelledby="requestMoreMenu"
+                >
+                  <button
+                    type="button"
+                    className="dropdown-item"
+                    onClick={openUpdatePopUp}
+                  >
+                    <i className="fad fa-fw fa-users mr-2"></i>Update Client
+                  </button>
                 </div>
               }
             >
