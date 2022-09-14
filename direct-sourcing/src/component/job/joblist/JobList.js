@@ -6,8 +6,7 @@ import { GoLocation } from "react-icons/go";
 import { AiOutlineClockCircle } from "react-icons/ai";
 
 function JobList({ role }) {
-  const jobs = job;
-  const [ jobData, setJobs] = useState([])
+  const [jobData, setJobs] = useState([]);
   const jobType = [
     "Full Time",
     "Contract",
@@ -17,8 +16,8 @@ function JobList({ role }) {
   ];
   const [searchJob, setSearchJob] = useState("");
   useEffect(() => {
-    setJobs(job)
-    setSearchJob(job)
+    setJobs(job);
+    setSearchJob(job);
   }, []);
 
   const filterJobs = (e) => {
@@ -27,9 +26,7 @@ function JobList({ role }) {
         return val;
       } else if (
         val.jobTitle.toLowerCase().includes(e.target.value.toLowerCase()) ||
-        val.jobType
-          .toLowerCase()
-          .includes(e.target.value.toLowerCase()) ||
+        val.jobType.toLowerCase().includes(e.target.value.toLowerCase()) ||
         val.jobStatus.toLowerCase().includes(e.target.value.toLowerCase())
       ) {
         return val;
@@ -44,7 +41,7 @@ function JobList({ role }) {
       if (e.target.value == "") {
         return val;
       } else if (
-        val.jobLocation.toLowerCase().includes(e.target.value.toLowerCase()) 
+        val.jobLocation.toLowerCase().includes(e.target.value.toLowerCase())
       ) {
         return val;
       }
@@ -54,51 +51,44 @@ function JobList({ role }) {
   };
 
   return (
-     <div className='card card-flat card-borderless bg-gray4 p-4 mb-3'>
-        { role === 'Candidate' &&
+    <div className="card card-flat card-borderless bg-gray4 p-4 mb-3">
+      {role === "Candidate" && (
         <div>
-          <h3 className="ml-5">Job Search</h3>
-
-          <div className="card card-flat bg-gray4 d-flex m-3 ml-5">
+          <h4>Job Search</h4>
+          <div className="card card-flat bg-gray4 d-flex">
             <div className="card-body w-100">
               <div className="form-floating mb-2" style={{ zIndex: "999" }}>
-                <div className="">
-                  <div class="col-lg-6 col-md-4 col-sm-12 col-xs-12">
+                  <div className="row">
+                  <div class="col-lg-4">
                     <div class="mb-2">
                       <input
                         type="text"
                         placeholder="Search Jobs"
                         class="form-control small font-14"
-
                         onChange={filterJobs}
                       />
                     </div>
                   </div>
-                  <hr />
-                  <div className="row">
-                    <div class="col-lg-6 col-md-4 col-sm-12 col-xs-12">
+                    <div class="col-lg-4">
                       <div class="mb-2">
                         <input
                           type="text"
                           placeholder="Search JobLocation"
                           class="form-control small font-14"
-
                           onChange={filterJobLocation}
                         />
                       </div>
                     </div>
-                    <div class="col-lg-6 col-md-4 col-sm-12 col-xs-12">
-                      <div className="form-floating">
+                    <div class="col-lg-4">
+                      <div className="mb-2">
                         <select
-                          className="font-14 form-select"
+                          className="form-select small font-14"
                           name="jobType"
-                        // onChange={handleChange}
+                          // onChange={handleChange}
                         >
                           <option>Select Job Type</option>
                           {jobType.map((e) => (
-                            <option selected={e === jobType} value={e}>
-                              {e}
-                            </option>
+                            <option>{e}</option>
                           ))}
                         </select>
                       </div>
@@ -144,82 +134,81 @@ function JobList({ role }) {
                         </span>
                       }
                     </div> */}
-                    <span className="d-flex align-items-center me-3">
-                      <RiSuitcaseLine />
-                      <small className="font-regular font-primary font-gray1 mr-2 ml-2">
-                        {request.jobType}
-                      </small>
-                    </span>
-                    <span className="d-flex align-items-center me-3">
-                      {request.jobLocation ? (
-                        <>
-                          <GoLocation />
-                          <span className="font-regular font-primary font-gray1 ml-2">
-                            {request.jobLocation}
-                          </span>
-                        </>
+                  <span className="d-flex align-items-center me-3">
+                    <RiSuitcaseLine />
+                    <small className="font-regular font-primary font-gray1 mr-2 ml-2">
+                      {request.jobType}
+                    </small>
+                  </span>
+                  <span className="d-flex align-items-center me-3">
+                    {request.jobLocation ? (
+                      <>
+                        <GoLocation />
+                        <span className="font-regular font-primary font-gray1 ml-2">
+                          {request.jobLocation}
+                        </span>
+                      </>
+                    ) : (
+                      <>
+                        <GoLocation />
+                        <span className="font-regular font-primary font-gray1 ml-2">
+                          Remote
+                        </span>
+                      </>
+                    )}
+                  </span>
+                  <span className="d-flex align-items-center me-3 ml-2">
+                    <AiOutlineClockCircle />
+                    {moment(request.expiresOn).diff(new Date(), "days") < 0 && (
+                      <span className="tag tag-red1 ml-2">
+                        <strong> Expired </strong>
+                      </span>
+                    )}
+                    {moment(request.expiresOn).diff(new Date(), "days") ===
+                      0 && (
+                      <span className="tag tag-red1 ml-2">
+                        <strong> Expires Today </strong>
+                      </span>
+                    )}
+                    {moment(request.expiresOn).diff(new Date(), "days") ===
+                      1 && (
+                      <span className="font-regular ml-2">
+                        <strong> 1 Day Left To Fill </strong>
+                      </span>
+                    )}
+                    {moment(request.expiresOn).diff(new Date(), "days") > 1 &&
+                      (moment(request.expiresOn).diff(new Date(), "days") <=
+                      5 ? (
+                        <span className="tag tag-red1 ml-2">
+                          <strong>
+                            {" "}
+                            {moment(request.expiresOn).diff(
+                              new Date(),
+                              "days"
+                            )}{" "}
+                            Days Left To Fill{" "}
+                          </strong>
+                        </span>
                       ) : (
-                        <>
-                          <GoLocation />
-                          <span className="font-regular font-primary font-gray1 ml-2">
-                            Remote
-                          </span>
-                        </>
-                      )}
-                    </span>
-                    <span className="d-flex align-items-center me-3 ml-2">
-                      <AiOutlineClockCircle />
-                      {moment(request.expiresOn).diff(new Date(), "days") < 0 && (
-                        <span className="tag tag-red1 ml-2">
-                          <strong> Expired </strong>
-                        </span>
-                      )}
-                      {moment(request.expiresOn).diff(new Date(), "days") ===
-                        0 && (
-                        <span className="tag tag-red1 ml-2">
-                          <strong> Expires Today </strong>
-                        </span>
-                      )}
-                      {moment(request.expiresOn).diff(new Date(), "days") ===
-                        1 && (
                         <span className="font-regular ml-2">
-                          <strong> 1 Day Left To Fill </strong>
+                          <strong>
+                            {" "}
+                            {moment(request.expiresOn).diff(
+                              new Date(),
+                              "days"
+                            )}{" "}
+                            Days Left To Fill{" "}
+                          </strong>
                         </span>
-                      )}
-                      {moment(request.expiresOn).diff(new Date(), "days") > 1 &&
-                        (moment(request.expiresOn).diff(new Date(), "days") <=
-                        5 ? (
-                          <span className="tag tag-red1 ml-2">
-                            <strong>
-                              {" "}
-                              {moment(request.expiresOn).diff(
-                                new Date(),
-                                "days"
-                              )}{" "}
-                              Days Left To Fill{" "}
-                            </strong>
-                          </span>
-                        ) : (
-                          <span className="font-regular ml-2">
-                            <strong>
-                              {" "}
-                              {moment(request.expiresOn).diff(
-                                new Date(),
-                                "days"
-                              )}{" "}
-                              Days Left To Fill{" "}
-                            </strong>
-                          </span>
-                        ))}
-                    </span>
-                  </div>
+                      ))}
+                  </span>
                 </div>
-              </a>
-            ))}
-          </div>
+              </div>
+            </a>
+          ))}
         </div>
+      </div>
     </div>
-
   );
 }
 
