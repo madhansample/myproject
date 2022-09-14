@@ -47,7 +47,7 @@ const Index = () => {
               </a>
             </div>
             <div className="col-xl-3 d-flex">
-              <a href="/client/curator" className="card col p-0 card-xl mb-2">
+              <a href="/client/recruiter" className="card col p-0 card-xl mb-2">
                 <div className="card-body text-center">
                   <img height="30px" src={recIcon} />
                   <h6 className="mt-4">Recruiter</h6>
