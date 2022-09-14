@@ -6,7 +6,8 @@ import { GoLocation } from "react-icons/go";
 import { AiOutlineClockCircle } from "react-icons/ai";
 
 function JobList() {
-  const jobData = job;
+  const jobs = job;
+  const [ jobData, setJobs] = useState([])
   const jobType = [
     "Full Time",
     "Contract",
@@ -14,9 +15,45 @@ function JobList() {
     "Temp To Hire",
     "Volunteer",
   ];
+  const [searchJob, setSearchJob] = useState("");
   useEffect(() => {
     console.log(job);
+    setJobs(job)
+    setSearchJob(job)
   }, []);
+
+  const filterJobs = (e) => {
+    const filterJobs = searchJob.filter((val) => {
+      if (e.target.value == "") {
+        return val;
+      } else if (
+        val.jobTitle.toLowerCase().includes(e.target.value.toLowerCase()) ||
+        val.jobType
+          .toLowerCase()
+          .includes(e.target.value.toLowerCase()) ||
+        val.jobStatus.toLowerCase().includes(e.target.value.toLowerCase())
+      ) {
+        return val;
+      }
+    });
+
+    setJobs(filterJobs);
+  };
+
+  const filterJobLocation = (e) => {
+    const filterJobLocation = searchJob.filter((val) => {
+      if (e.target.value == "") {
+        return val;
+      } else if (
+        val.jobLocation.toLowerCase().includes(e.target.value.toLowerCase()) 
+      ) {
+        return val;
+      }
+    });
+
+    setJobs(filterJobLocation);
+  };
+
   return (
     <>
       <div className="col-lg-11">
@@ -33,7 +70,7 @@ function JobList() {
                       placeholder="Search Jobs"
                       class="form-control small font-14"
 
-                      //onChange={filterCompanies}
+                      onChange={filterJobs}
                     />
                   </div>
                 </div>
@@ -46,7 +83,7 @@ function JobList() {
                         placeholder="Search JobLocation"
                         class="form-control small font-14"
 
-                        //onChange={filterCompanies}
+                        onChange={filterJobLocation}
                       />
                     </div>
                   </div>

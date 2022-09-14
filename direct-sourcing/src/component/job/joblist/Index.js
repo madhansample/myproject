@@ -23,7 +23,8 @@ const Index = () => {
                     Explore what it is like to work and grow at HCL!
                 </em>
             </div>
-            <JobList />           
+            <JobList />
+            <Footer/>           
         </div>
     );
 };
