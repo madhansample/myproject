@@ -3,17 +3,19 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { FaRegCalendarAlt, FaUser, FaMapMarkerAlt } from "react-icons/fa";
+import moment from "moment";
 import TopNavBar from "../../common/TopNavBar";
 import Footer from "../../common/Footer";
 import Logo from "../../../assets/images/High5Logo.png";
 import ApplyJob from "./ApplyJob";
+
 function Index() {
   const [job, setJob] = useState({
     jobTitle: "Oracle LSH and OBIEE developer",
     jobLocation: "Princeton, NJ - United States",
     jobId: "D7XJ4",
     positionCount: "1",
-    jobPostedDate: "2021-12-08T12:08:44.917Z",
+    jobPostedDate: "2021-08-16T12:08:44.917Z",
     jobRole: "Oracle LSH",
     Onsite: false,
     Remote: true,
@@ -28,16 +30,15 @@ function Index() {
       "Completing Business requirements on time and adhering SLAs",
     ],
   });
-  const [ role, setRole ] = useState('')
+  const [role, setRole] = useState("");
 
-  useEffect (()=> {
-    let details = localStorage.getItem('job')
-    if(details) {
-      setJob(JSON.parse(details))
+  useEffect(() => {
+    let details = localStorage.getItem("job");
+    if (details) {
+      setJob(JSON.parse(details));
     }
-    setRole(localStorage.getItem('role'))
-  }, [])
-  //console.log(job)
+    setRole(localStorage.getItem("role"));
+  }, []);
 
   return (
     <div>
@@ -84,15 +85,6 @@ function Index() {
 
                   <FaRegCalendarAlt
                     style={{
-                      color: "#3F7BB9",
-                      fontSize: "12px",
-                      marginLeft: 10,
-                      marginRight: 5,
-                    }}
-                  />
-
-                  <FaRegCalendarAlt
-                    style={{
                       color: "#001B38",
                       fontSize: "12px",
                       marginLeft: 10,
@@ -101,17 +93,18 @@ function Index() {
                   />
 
                   <span style={{ marginRight: 10, color: "white" }}>
-                    {job.jobDuration}
+                    {moment(new Date(job.jobPostedDate), "YYYYMMDD").fromNow()}
                   </span>
                 </div>
               </div>
             </Col>
-            { role === 'Candidate' && <ApplyJob />}
+            <ApplyJob />
+            {/* { role === 'Candidate' && <ApplyJob />} */}
           </Row>
         </Container>
       </div>
 
-        <div style={{ marginLeft: 100, marginTop: 20 }}>
+      <div style={{ marginLeft: 100, marginTop: 20 }}>
         <p>
           Job Id :
           <strong>
@@ -143,67 +136,67 @@ function Index() {
 
         {/* // job.Onsite ?  <p><strong>Onsite / Hybrid / Remote :  Onsite</strong></p>
               // :  <strong>Onsite / Hybrid / Remote :  Remote</strong> */}
-          {/* <p><strong>Onsite / Hybrid / Remote :  Hybrid  (No. of Days : {job.Hybrid}</strong></p> */}
-        </div>
-        <div style={{ marginLeft: 100, marginTop: 40 }}>
-          <strong>Skills</strong>
-          {job.jobSkill.map((ele, i) => {
-            return <p>{`${i + 1}) ${ele} `}</p>;
-          })}
-        </div>
-        <div style={{ marginLeft: 100, marginTop: 40 }}>
-          <strong>Responsibilities:</strong>
-          {job.jobResponsibilty.map((ele, i) => {
-            return <p>{`${i + 1}) ${ele} `}</p>;
-          })}
-        </div>
-        <div style={{ marginLeft: 100, marginTop: 80 }}>
-          <span>
-            Posted on {job.jobPostedDate}, {job.jobPublishTime}
-          </span>
-        </div>
-        <div
-          style={{
-            marginLeft: 100,
-            marginTop: 40,
-            width: 625,
-            height: 1.5,
-            backgroundColor: "#eee",
-          }}
-        ></div>
-        <div style={{ marginLeft: 100, marginTop: 40 }}>
-          <button
-            className="btn btn-secondary mt-3"
-            onClick={() => {
-              window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
-            }}
-            // style={{ backgroundColor: "#3F7BB9" }}
-          >
-            <span>
-              <strong> Back to Top</strong>{" "}
-            </span>
-          </button>
-        </div>
-        <footer style={{ marginLeft: 100, marginTop: 40 }}>
-          <div>
-            <span>Powered by</span>
-            <a>
-              <img
-                style={{
-                  width: 40,
-                  height: 30,
-                  paddingBottom: 10,
-                  marginLeft: 5,
-                }}
-                src={Logo}
-              />
-            </a>
-          </div>
-          <p>
-            <a>Privacy Policy</a> and <a>Terms of Service</a>
-          </p>
-        </footer>
+        {/* <p><strong>Onsite / Hybrid / Remote :  Hybrid  (No. of Days : {job.Hybrid}</strong></p> */}
       </div>
+      <div style={{ marginLeft: 100, marginTop: 40 }}>
+        <strong>Skills</strong>
+        {job.jobSkill.map((ele, i) => {
+          return <p>{`${i + 1}) ${ele} `}</p>;
+        })}
+      </div>
+      <div style={{ marginLeft: 100, marginTop: 40 }}>
+        <strong>Responsibilities:</strong>
+        {job.jobResponsibilty.map((ele, i) => {
+          return <p>{`${i + 1}) ${ele} `}</p>;
+        })}
+      </div>
+      <div style={{ marginLeft: 100, marginTop: 80 }}>
+        <span>
+          Posted on {job.jobPostedDate}, {job.jobPublishTime}
+        </span>
+      </div>
+      <div
+        style={{
+          marginLeft: 100,
+          marginTop: 40,
+          width: 625,
+          height: 1.5,
+          backgroundColor: "#eee",
+        }}
+      ></div>
+      <div style={{ marginLeft: 100, marginTop: 40 }}>
+        <button
+          className="btn btn-secondary mt-3"
+          onClick={() => {
+            window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+          }}
+          // style={{ backgroundColor: "#3F7BB9" }}
+        >
+          <span>
+            <strong> Back to Top</strong>{" "}
+          </span>
+        </button>
+      </div>
+      <footer style={{ marginLeft: 100, marginTop: 40 }}>
+        <div>
+          <span>Powered by</span>
+          <a>
+            <img
+              style={{
+                width: 40,
+                height: 30,
+                paddingBottom: 10,
+                marginLeft: 5,
+              }}
+              src={Logo}
+            />
+          </a>
+        </div>
+        <p>
+          <a>Privacy Policy</a> and <a>Terms of Service</a>
+        </p>
+      </footer>
+    </div>
     // </body>
   );
 }

@@ -4,34 +4,31 @@
     "jobLocation": "Autin, TX / Mountain View, CA",
     "jobId": "XYMEJ",
     "positionCount": "1",
-    "jobPostedDate": "2021-16-08T12:08:44.917Z",
+    "jobPostedDate": "2021-08-16T12:08:44.917Z",
     "jobRole": "SAP ABAP Developer",
     "Onsite": true,
     "Remote": false,
-
     "hotJob": true,
     "jobStatus": "open",
     "jobType": "FullTime",
-    "expiresOn": "2022-11-09T12:08:44.917Z",
-
+    "expiresOn": "2022-09-11T12:08:44.917Z",
     "Hybrid" : 0,
-
     "jobDescription": [],
     "jobSkill": ["Node.js","Redux", "SAP"],
     "jobResponsibilty": ["Execute on integration and customization build based on SAP or other internal tools","Author design documents and present design reviews","Own responsibility for ensuring code is tested using defined test frameworks"," Identify problems with requirements and communicate them"," Work in an agile development environment making regular incremental progress"]
-    
   },
   {
     "jobTitle": "Oracle LSH and OBIEE developer",
     "jobLocation": "Princeton, NJ - United States",
     "jobId": "D7XJ4",
     "positionCount": "1",
-    "jobPostedDate": "2021-12-08T12:08:44.917Z",
+    "jobPostedDate": "2021-08-12T12:08:44.917Z",
     "jobRole": "Oracle LSH",
     "Onsite": false,
     "Remote": true,
     "Hybrid": 0,
     "jobDescription": [],
+    "expiresOn": "2022-09-18T12:08:44.917Z",
     "jobSkill": ["Oracle", "My SQL", "OBIEE"],
     "jobResponsibilty": ["Handling support incidents, change requests and problem tickets independently","Implementing system changes and adhering process/documentations","Co-ordinating various IT team and ensure the application availability and business continuity","Co-ordinate and closely work with Business members and managing outage communications","Completing Business requirements on time and adhering SLAs"]
   },
@@ -40,19 +37,16 @@
     "jobLocation": "Austin, TX - United States",
     "jobId": "GM6RD",
     "positionCount": "1",
-    "jobPostedDate": "2021-05-08T12:08:44.917Z",
+    "jobPostedDate": "2021-08-05T12:08:44.917Z",
     "jobRole": "Business System",
     "Onsite": false,
     "Remote": true,
-
     "hotJob": false,
     "jobStatus": "expired",
     "jobType": "Part Time",
-    "expiresOn": "2022-29-10T12:08:44.917Z",
-
+    "expiresOn": "2022-10-29T12:08:44.917Z",
     "Hybrid": 0,
     "jobDuration" :"a month ago",
-
     "jobDescription": ["Plan, prioritize, deliver, and support systems solutions related to SAP & other internal tools"," Organize and manage work through comprehensive documentation to drive project delivery","Architect innovative solutions to automate and scale business systems","Troubleshoot and resolve system, data, and process-related issues"],
     "jobSkill":["SAP", "MDG", "Ariba"],
     "jobResponsibilty":[]
@@ -62,7 +56,7 @@
     "jobLocation": "",
     "jobId": "XBQ9A",
     "positionCount": "1",
-    "jobPostedDate": "2021-05-08T12:08:44.917Z",
+    "jobPostedDate": "2021-08-05T12:08:44.917Z",
     "jobRole": "SAP",
     "Onsite": false,
     "Remote": false,
@@ -70,10 +64,8 @@
     "hotJob": false,
     "jobStatus": "deactivated",
     "jobType": "Volunteer",
-    "expiresOn": "2022-29-10T12:08:44.917Z",
-
+    "expiresOn": "2022-10-29T12:08:44.917Z",
     "Hybrid": 3,
-
     "jobDescription": ["Execute on integration and customization build based on SAP or other internal tools","Author design documents and present design reviews","Own responsibility for ensuring code is tested using defined test frameworks","Identify problems with requirements and communicate them"],
     "jobSkill":["SAP toolset", "ABAP", "Docusign"],
     "jobResponsibilty":[]

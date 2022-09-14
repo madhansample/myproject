@@ -8,7 +8,7 @@ import AddJob from "../client/hiringmanager/AddJob";
 const SideNavbar = (props) => {
   const { data } = props;
   const [update, setUpdate] = useState(false);
-  const [ showAddJobModal, setShowAddJobModal ] = useState(false)
+  const [showAddJobModal, setShowAddJobModal] = useState(false);
 
   const openUpdatePopUp = () => {
     setUpdate(true);
@@ -37,7 +37,7 @@ const SideNavbar = (props) => {
         </div>
       </div>
       <div className="body">
-        {(data.role == "Super Admin" ) && (
+        {data.role == "Super Admin" && (
           <div style={{ fontSize: "17px" }} data-bs-placement="top">
             <OverlayTrigger
               trigger="click"
@@ -65,7 +65,7 @@ const SideNavbar = (props) => {
             </OverlayTrigger>
           </div>
         )}
-        {(data.role == "Admin" || data.role === 'Hiring Manager') && (
+        {data.role == "Admin" && (
           <div style={{ fontSize: "17px" }} data-bs-placement="top">
             <OverlayTrigger
               trigger="click"
@@ -83,8 +83,33 @@ const SideNavbar = (props) => {
                   >
                     <i className="fad fa-fw fa-users mr-2"></i>Update Client
                   </button>
-                  <button type="button" className="dropdown-item" onClick={() => setShowAddJobModal(true)}>
-                      <i className="fad fa-fw fa-users mr-2"></i>Add Job
+                </div>
+              }
+            >
+              <button type="button" className="btn w-100 px-0">
+                <i className="fas fa-plus fa-fw-dropdown"></i>
+                <span className="nav-text ml-2">New</span>
+              </button>
+            </OverlayTrigger>
+          </div>
+        )}
+        {data.role == "Hiring Manager" && (
+          <div style={{ fontSize: "17px" }} data-bs-placement="top">
+            <OverlayTrigger
+              trigger="click"
+              rootClose
+              placement="bottom-end"
+              overlay={
+                <div
+                  className="dropdown-menu dropdown-menu-right"
+                  aria-labelledby="requestMoreMenu"
+                >
+                  <button
+                    type="button"
+                    className="dropdown-item"
+                    onClick={() => setShowAddJobModal(true)}
+                  >
+                    <i className="fad fa-fw fa-users mr-2"></i>Add Job
                   </button>
                 </div>
               }
@@ -95,7 +120,7 @@ const SideNavbar = (props) => {
               </button>
             </OverlayTrigger>
           </div>
-        )}            
+        )}
         <ul className="menu">
           <li>
             <a href={data.url} className="active">
@@ -112,23 +137,26 @@ const SideNavbar = (props) => {
         <ClientUpdate close={closePopUP} />
       </Modal>
       <Modal show={showAddJobModal} size="lg">
-          <Modal.Header>        
-              <h6 class="">Add Job</h6>
-              <button type="button" data-dismiss="modal" aria-label="Close" 
-                  onClick={() => setShowAddJobModal(false)} 
-                  class="close p-0 bl-modal-close-btn"
-              >
-                  <span aria-hidden="true">&times;</span>
-              </button>
-          </Modal.Header>
-          <Modal.Body>
-              <AddJob 
-                  closePanel={() => setShowAddJobModal(false)} 
-                  name={data.name}
-                  company={data.tenant}
-                  type={data.tenantType}
-              />
-          </Modal.Body>             
+        <Modal.Header>
+          <h6 class="">Add Job</h6>
+          <button
+            type="button"
+            data-dismiss="modal"
+            aria-label="Close"
+            onClick={() => setShowAddJobModal(false)}
+            class="close p-0 bl-modal-close-btn"
+          >
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </Modal.Header>
+        <Modal.Body>
+          <AddJob
+            closePanel={() => setShowAddJobModal(false)}
+            name={data.name}
+            company={data.tenant}
+            type={data.tenantType}
+          />
+        </Modal.Body>
       </Modal>
     </div>
   );

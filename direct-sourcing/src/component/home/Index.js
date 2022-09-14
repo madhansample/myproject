@@ -23,13 +23,19 @@ const Index = () => {
               </a>
             </div>
             <div className="col-xl-3 d-flex">
-              <a
-                href="/high5coordinator"
-                className="card col p-0 card-xl mb-2"
-              >
+              <a href="/high5coordinator" className="card col p-0 card-xl mb-2">
                 <div className="card-body text-center">
                   <img height="30px" src={recIcon} />
                   <h6 className="mt-4">H5 Coordinator</h6>
+                  <strong className="font-coral">Launch</strong>
+                </div>
+              </a>
+            </div>
+            <div className="col-xl-3 d-flex">
+              <a href="/careers" className="card col p-0 card-xl mb-2">
+                <div className="card-body text-center">
+                  <img height="30px" src={adminIcon} />
+                  <h6 className="mt-4">Career</h6>
                   <strong className="font-coral">Launch</strong>
                 </div>
               </a>
