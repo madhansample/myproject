@@ -92,7 +92,7 @@ function Index() {
                   />
 
                   <span style={{ marginRight: 10, color: "white" }}>
-                    {moment(new Date(job.jobPostedDate), "YYYYMMDD").fromNow()}
+                    {moment(new Date(job.jobPostedDate), "MMDDYYYY").fromNow()}
                   </span>
                 </div>
               </div>
@@ -119,17 +119,17 @@ function Index() {
 
         {job.Hybrid !== 0 ? (
           <span>
-            Onsite / Hybrid / Remote :{" "}
+            Workplace Type :{" "}
             <strong> Hybrid (No. of Days - {job.Hybrid} )</strong>
           </span>
         ) : job.Onsite ? (
           <span>
-            Onsite / Hybrid / Remote :<strong> Onsite</strong>
+            Workplace Type :<strong> Onsite</strong>
           </span>
         ) : (
           <span>
             {" "}
-            Onsite / Hybrid / Remote :<strong> Remote</strong>{" "}
+            Workplace Type :<strong> Remote</strong>{" "}
           </span>
         )}
 
@@ -151,7 +151,10 @@ function Index() {
       </div>
       <div style={{ marginLeft: 100, marginTop: 80 }}>
         <span>
-          Posted on {job.jobPostedDate}, {job.jobPublishTime}
+          {" "}
+          Published on :{" "}
+          <strong>{moment(job.jobPostedDate).format("MM-DD-YYYY")}</strong>
+          {job.jobPublishTime}
         </span>
       </div>
       <div
