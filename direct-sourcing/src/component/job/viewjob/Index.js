@@ -9,6 +9,7 @@ import {
   FaMapMarkerAlt,
   FaSuitcase,
 } from "react-icons/fa";
+import { RiSuitcaseLine } from "react-icons/ri";
 import moment from "moment";
 import TopNavBar from "../../common/TopNavBar";
 import Footer from "../../common/Footer";
@@ -107,7 +108,7 @@ function Index() {
                     {moment(new Date(job.jobPostedDate), "MMDDYYYY").fromNow()}
                   </span>
 
-                  <FaSuitcase
+                  <RiSuitcaseLine
                     style={{
                       color: "#001B38",
                       fontSize: "12px",
