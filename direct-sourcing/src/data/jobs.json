@@ -1,11 +1,11 @@
 [
   {
-    "jobTitle": "SAP ABAP Developer with P2P",
+    "jobTitle": "Mobile Developer",
     "jobLocation": "Autin, TX / Mountain View, CA",
     "jobId": "XYMEJ",
     "positionCount": "1",
     "jobPostedDate": "2022-08-14T12:08:44.917Z",
-    "jobRole": "SAP ABAP Developer",
+    "jobRole": "Mobile Developer",
     "Onsite": true,
     "Remote": false,
     "hotJob": true,
@@ -13,35 +13,37 @@
     "jobType": "FullTime",
     "expiresOn": "2022-10-10T12:08:44.917Z",
     "Hybrid" : 0,
-    "jobDescription": [],
-    "jobSkill": ["Node.js","Redux", "SAP"],
-    "jobResponsibilty": ["Execute on integration and customization build based on SAP or other internal tools","Author design documents and present design reviews","Own responsibility for ensuring code is tested using defined test frameworks"," Identify problems with requirements and communicate them"," Work in an agile development environment making regular incremental progress"]
+    "jobDescription": ["We are looking for a strong mobile app developer who welcomes both engineering and maintenance tasks. The primary focus will be to implement new user interfaces and features together with automated unit and integration tests.You will be working with our candid and collaborative team, where your knowledge and advice about application architecture and the newest mobile technologies will be highly appreciated. The code you write will need to be cleanly organized and of the highest quality. You’ll also help ensure solid application performance and an excellent user experience."],
+    "jobSkill": ["React Native"],
+    "jobResponsibilty": ["We are looking for a strong mobile app developer who welcomes both engineering and maintenance tasks. The primary focus will be to implement new user interfaces and features together with automated unit and integration tests.You will be working with our candid and collaborative team, where your knowledge and advice about application architecture and the newest mobile technologies will be highly appreciated. The code you write will need to be cleanly organized and of the highest quality. You’ll also help ensure solid application performance and an excellent user experience."],
+    "tenant": "Amazon"
   },
   {
-    "jobTitle": "Oracle LSH and OBIEE developer",
+    "jobTitle": "React JS Developer",
     "jobLocation": "Princeton, NJ - United States",
     "jobId": "D7XJ4",
     "positionCount": "1",
     "jobPostedDate": "2022-08-12T12:08:44.917Z",
-    "jobRole": "Oracle LSH",
+    "jobRole": "React JS",
     "Onsite": false,
     "Remote": true,
     "hotJob": false,
     "jobStatus": "open",
     "jobType": "FullTime",
     "Hybrid": 0,
-    "jobDescription": [],
+    "jobDescription": ["We are looking for a skilled react.js developer to join our front-end development team. In this role, you will be responsible for developing and implementing user interface components using React.js concepts and workflows such as Redux, Flux, and Webpack. You will also be responsible for profiling and improving front-end performance and documenting our front-end codebase.To ensure success as a react.js developer, you should have in-depth knowledge of JavaScript and React concepts, excellent front-end coding skills, and a good understanding of progressive web applications. Ultimately, a top-class react.js developer should be able to design and build modern user interface components to enhance application performance."],
     "expiresOn": "2022-09-18T12:08:44.917Z",
-    "jobSkill": ["Oracle", "My SQL", "OBIEE"],
-    "jobResponsibilty": ["Handling support incidents, change requests and problem tickets independently","Implementing system changes and adhering process/documentations","Co-ordinating various IT team and ensure the application availability and business continuity","Co-ordinate and closely work with Business members and managing outage communications","Completing Business requirements on time and adhering SLAs"]
+    "jobSkill": ["Javascript", "React Hooks", "My Sql"],
+    "jobResponsibilty": ["Meeting with the development team to discuss user interface ideas and applications.Reviewing application requirements and interface designs.Identifying web-based user interactions.Developing and implementing highly responsive user interface components using react concepts."],
+    "tenant": "Amazon"
   },
   {
-    "jobTitle": "Business System Analyst SAP",
+    "jobTitle": "Node.js Developer",
     "jobLocation": "Austin, TX - United States",
     "jobId": "GM6RD",
     "positionCount": "1",
     "jobPostedDate": "2022-08-05T12:08:44.917Z",
-    "jobRole": "Business System",
+    "jobRole": "Node JS",
     "Onsite": false,
     "Remote": true,
     "hotJob": false,
@@ -50,17 +52,19 @@
     "expiresOn": "2022-10-29T12:08:44.917Z",
     "Hybrid": 0,
     "jobDuration" :"a month ago",
-    "jobDescription": ["Plan, prioritize, deliver, and support systems solutions related to SAP & other internal tools"," Organize and manage work through comprehensive documentation to drive project delivery","Architect innovative solutions to automate and scale business systems","Troubleshoot and resolve system, data, and process-related issues"],
-    "jobSkill":["SAP", "MDG", "Ariba"],
-    "jobResponsibilty":[]
+    "jobDescription": ["We are looking for a highly capable Node.js developer to optimize our web-based application performance. You will be collaborating with our front-end application developers, designing back-end components, and integrating data storage and protection solutions.To ensure success as a Node.js developer, you should possess extensive knowledge of Node.Js based services and experience in a similar role. An accomplished Node.js developer will be someone whose expertise results in the stable, fast, and secure exchange of data between servers and end-users."],
+   
+    "jobSkill": ["Node Js", "Express Js", "My Sql"],
+    "jobResponsibilty":["Developing and maintaining all server-side network components. Ensuring optimal performance of the central database and responsiveness to front-end requests. Collaborating with front-end developers on the integration of elements.Designing customer-facing UI and back-end services for various business processes."],
+    "tenant": "Amazon"
   },
   {
-    "jobTitle": "SAP Application Engineer",
-    "jobLocation": "",
+    "jobTitle": "MERN Stack Developer",
+    "jobLocation": "Austin, TX - United States",
     "jobId": "XBQ9A",
     "positionCount": "1",
     "jobPostedDate": "2022-08-05T12:08:44.917Z",
-    "jobRole": "SAP",
+    "jobRole": "MERN",
     "Onsite": false,
     "Remote": false,
     "hotJob": false,
@@ -68,8 +72,9 @@
     "jobType": "Volunteer",
     "expiresOn": "2022-10-29T12:08:44.917Z",
     "Hybrid": 3,
-    "jobDescription": ["Execute on integration and customization build based on SAP or other internal tools","Author design documents and present design reviews","Own responsibility for ensuring code is tested using defined test frameworks","Identify problems with requirements and communicate them"],
-    "jobSkill":["SAP toolset", "ABAP", "Docusign"],
-    "jobResponsibilty":[]
+    "jobDescription": ["MERN stack developer should have the ability to translate Wireframes and PSD Designs into functional web apps. Binding of UI elements to JavaScript object modelsCreating RESTful services with Node.jsMERN stack developer must have proven experience in front & back-end development"],
+    "jobSkill":["Mongo DB", "Express Js", "React Js" , "Node Js"],
+    "jobResponsibilty":["MERN Fullstack eCommerce developer is responsible for writing reusable, testable, and efficient code. Design and implementation of low-latency, high-availability, and performant applications Implementation of security and data protection. Understanding of performance testing and optimization techniques"],
+    "tenant": "Amazon"
   }
 ]

@@ -3,7 +3,12 @@ import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { useParams } from "react-router-dom";
-import { FaRegCalendarAlt, FaUser, FaMapMarkerAlt } from "react-icons/fa";
+import {
+  FaRegCalendarAlt,
+  FaUser,
+  FaMapMarkerAlt,
+  FaSuitcase,
+} from "react-icons/fa";
 import moment from "moment";
 import TopNavBar from "../../common/TopNavBar";
 import Footer from "../../common/Footer";
@@ -43,7 +48,7 @@ function Index() {
     setJob(jobs.find((i) => i.jobId === id));
     setRole(localStorage.getItem("role"));
   }, []);
-  
+
   return (
     <div>
       <TopNavBar />
@@ -54,7 +59,9 @@ function Index() {
         >
           <Row style={{ marginLeft: 80 }}>
             <Col style={{ marginTop: 40 }}>
-              {/* <a style={{color: '#3F7BB9'}} href="/" >‹ Back to all jobs</a> */}
+              <a style={{ color: "white" }} href="/careers/amazon/jobs">
+                ‹ Back to all jobs
+              </a>
 
               <div className="header">
                 <h1 style={{ marginTop: 20, color: "white" }}>
@@ -98,6 +105,19 @@ function Index() {
 
                   <span style={{ marginRight: 10, color: "white" }}>
                     {moment(new Date(job.jobPostedDate), "MMDDYYYY").fromNow()}
+                  </span>
+
+                  <FaSuitcase
+                    style={{
+                      color: "#001B38",
+                      fontSize: "12px",
+                      marginLeft: 10,
+                      marginRight: 5,
+                    }}
+                  />
+
+                  <span style={{ marginRight: 10, color: "white" }}>
+                    {job.jobType} Position
                   </span>
                 </div>
               </div>
@@ -143,21 +163,23 @@ function Index() {
         {/* <p><strong>Onsite / Hybrid / Remote :  Hybrid  (No. of Days : {job.Hybrid}</strong></p> */}
       </div>
       <div style={{ marginLeft: 100, marginTop: 40 }}>
-        <strong>Skills</strong>
+        <span>Skills :</span>
         {job.jobSkill.map((ele, i) => {
-          return <p>{`${i + 1}) ${ele} `}</p>;
+          return <strong>{` ${ele} `}</strong>;
         })}
       </div>
-      <div style={{ marginLeft: 100, marginTop: 40 }}>
-        <strong>Responsibilities:</strong>
-        {job.jobResponsibilty.map((ele, i) => {
-          return <p>{`${i + 1}) ${ele} `}</p>;
+      <div style={{ marginLeft: 100, marginTop: 40, marginRight: 700 }}>
+        <strong style={{ fontSize: 20 }}>Job Description:</strong>
+        {job.jobDescription.map((ele, i) => {
+          return (
+            <p style={{ "line-height": "1.6", marginTop: 15 }}>{` ${ele} `}</p>
+          );
         })}
       </div>
       <div style={{ marginLeft: 100, marginTop: 80 }}>
         <span>
           {" "}
-          Published on :{" "}
+          Posted on :{" "}
           <strong>{moment(job.jobPostedDate).format("MM-DD-YYYY")}</strong>
           {job.jobPublishTime}
         </span>
