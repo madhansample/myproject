@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import Footer from "../../common/Footer";
 import TopNavBar from "../../common/TopNavBar";
 import JobList from "./JobList";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   useEffect(() => {
@@ -44,16 +45,18 @@ const Index = () => {
                 If you are thinking about a future with us, sign up to stay
                 connected and be informed of any new opportunities.
               </small>
-              <button
-                className="btn btn-secondary btn-sm ml-5"
-                style={{
-                  width: "30%",
-                  fontWeight: "bold",
-                }}
-                // onClick={() => closeModal(true)}
-              >
-                Join our Talent Community
-              </button>
+              <Link to="/careers/joinnow">
+                <button
+                  className="btn btn-secondary btn-sm ml-5"
+                  style={{
+                    width: "30%",
+                    fontWeight: "bold",
+                  }}
+                  // onClick={() => closeModal(true)}
+                >
+                  Join our Talent Community
+                </button>
+              </Link>
             </p>
             <div></div>
           </div>
