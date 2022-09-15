@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Form } from "react-bootstrap";
 import Modal from "react-bootstrap/Modal";
+import { toast } from "react-toastify";
 
 const ClientUpdate = (props) => {
   const { openClientUpdate, setOpenClientUpdate } = props;
@@ -15,7 +16,8 @@ const ClientUpdate = (props) => {
     cityName: "Conway",
     address: "Conway, AR, United States",
     zipCode: "72032",
-    description: "At TCC, we don’t just accept the differences—we celebrate them. We are committed to cultivating and preserving a culture of inclusion and connectedness. We are able to grow and learn better together with a diverse team of employees. As an equal opportunity employer, we stay true to our mission by ensuring that our place can be anyone’s place. Explore what it is like to work and grow at HCL!",
+    description:
+      "At TCC, we don’t just accept the differences—we celebrate them. We are committed to cultivating and preserving a culture of inclusion and connectedness. We are able to grow and learn better together with a diverse team of employees. As an equal opportunity employer, we stay true to our mission by ensuring that our place can be anyone’s place. Explore what it is like to work and grow at HCL!",
   });
 
   const setField = (field, value) => {
@@ -340,6 +342,10 @@ const ClientUpdate = (props) => {
                 type="button"
                 className="btn btn-primary"
                 // onClick={handleSubmit}
+                onClick={() => {
+                  setOpenClientUpdate(false);
+                  toast.success("Client data updated successfully");
+                }}
               >
                 <span>Submit</span>
               </button>

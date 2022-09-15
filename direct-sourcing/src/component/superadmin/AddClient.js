@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Form } from "react-bootstrap";
 import Modal from "react-bootstrap/Modal";
+import { toast } from "react-toastify";
 
 const AddClient = (props) => {
   const { openAddClient, setOpenAddClient } = props;
@@ -328,6 +329,11 @@ const AddClient = (props) => {
                 type="button"
                 className="btn btn-primary"
                 // onClick={handleSubmit}
+                onClick={() => {
+                  console.log("asdasd");
+                  setOpenAddClient(false);
+                  toast.success("Client Added Successfully");
+                }}
               >
                 <span>Submit</span>
               </button>

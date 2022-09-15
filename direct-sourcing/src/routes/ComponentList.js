@@ -11,6 +11,7 @@ import SuperAdmin from "../component/superadmin/Index";
 import H5Coordinator from "../component/h5coordinator/Index";
 import Index from "../component/job/viewjob/Index.js";
 import Career from "../component/job/joblist/Index";
+import JoinNow from "../component/job/viewjob/JoinNow";
 
 export const ComponentList = [
   {
@@ -52,6 +53,10 @@ export const ComponentList = [
   {
     path: "/careers/:tenant/jobs/:id",
     element: <Index />,
+  },
+  {
+    path: "/careers/joinnow",
+    element: <JoinNow />,
   },
   {
     path: "/superadmin",

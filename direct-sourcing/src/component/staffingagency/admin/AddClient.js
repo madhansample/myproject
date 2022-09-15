@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Form } from "react-bootstrap";
 import Modal from "react-bootstrap/Modal";
+import { toast } from "react-toastify";
 
 const AddClient = (props) => {
   const { openAddClient, setOpenAddClient } = props;
@@ -60,8 +61,14 @@ const AddClient = (props) => {
   const handleChange = async (e) => {
     const file = e.target.files[0];
     const base64 = await convertBase64(file);
-    var file1 = dataURLtoFile(base64, 'hello.jpeg');
+    var file1 = dataURLtoFile(base64, "hello.jpeg");
     console.log(file1);
+  };
+
+  const handleSubmit = () => {
+    console.log("sdfdf");
+    setOpenAddClient(false);
+    toast.success("Add Client form submitted");
   };
   return (
     <Modal show={openAddClient} size="lg">
@@ -99,7 +106,7 @@ const AddClient = (props) => {
                             onChange={(e) => setField("tenant", e.target.value)}
                             isInvalid={!!errors.tenant}
                           />
-                          <label>Tenant Name *</label>
+                          <label>Tenant Nameeee *</label>
                           <Form.Control.Feedback type="invalid">
                             {errors.tenant}
                           </Form.Control.Feedback>
@@ -303,7 +310,7 @@ const AddClient = (props) => {
               <button
                 type="button"
                 className="btn btn-primary"
-                // onClick={handleSubmit}
+                onClick={handleSubmit}
               >
                 <span>Submit</span>
               </button>

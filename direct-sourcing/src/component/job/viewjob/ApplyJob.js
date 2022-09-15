@@ -10,6 +10,7 @@ import {
 import { RiShareBoxLine } from "react-icons/ri";
 import Logo from "../viewjob/High5Logo.png";
 import ApplyWithEmail from "./ApplyWithEmail";
+import { Link } from "react-router-dom";
 
 const ApplyJob = () => {
   const [isApplyJobModal, setIsApplyJobModal] = useState(false);
@@ -240,16 +241,18 @@ const ApplyJob = () => {
               </small>
             </p>
             <div>
-              <button
-                className="btn btn-secondary btn-sm"
-                style={{
-                  width: "30%",
-                  fontWeight: "bold",
-                }}
-                // onClick={() => closeModal(true)}
-              >
-                Join now
-              </button>
+              <Link to="/careers/joinnow">
+                <button
+                  className="btn btn-secondary btn-sm"
+                  style={{
+                    width: "30%",
+                    fontWeight: "bold",
+                  }}
+                  // onClick={() => closeModal(true)}
+                >
+                  Join now
+                </button>
+              </Link>
             </div>
           </div>
         </div>
